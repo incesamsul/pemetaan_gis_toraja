@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/postlogin', [LoginController::class, 'postLogin']);
 Route::get('/logout', [LoginController::class, 'logout']);
-Route::get('/', [LoginController::class, 'login']);
+Route::get('/', [Home::class, 'home']);
 
 
 Route::get('/tentang_aplikasi', [Home::class, 'tentangAplikasi']);
