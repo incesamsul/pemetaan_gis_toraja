@@ -30,7 +30,8 @@
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a data-slide="slides" data-slide-target="#discover">Discover</a></li>
                     <li><a href="news.html"> News</a></li>
-                    <li><button class="btn-login" id="openLogin">LOGIN</button></li>
+                    {{-- <li><button class="btn-login" id="openLogin">LOGIN</button></li> --}}
+                    <li><a class="btn-login" href="{{ URL::to('/login') }}">LOGIN</a></li>
                 </ul>
             </div>
         </div>
