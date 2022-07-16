@@ -28,6 +28,8 @@ use Illuminate\Support\Facades\Route;
 Route::post('/postlogin', [LoginController::class, 'postLogin']);
 Route::get('/logout', [LoginController::class, 'logout']);
 Route::get('/', [Home::class, 'home']);
+Route::get('/destination', [Home::class, 'destination']);
+Route::get('/single_destination/{id_destination}', [Home::class, 'singleDestination']);
 
 
 Route::get('/tentang_aplikasi', [Home::class, 'tentangAplikasi']);
@@ -38,7 +40,7 @@ Route::group(['middleware' => ['guest']], function () {
 });
 
 // GENERAL CONTROLLER ROUTE
-Route::group(['middleware' => ['auth', 'ceklevel:Administrator,user,penilai']], function () {
+Route::group(['middleware' => ['auth', 'ceklevel:Administrator,user']], function () {
 
     Route::get('/dashboard', [General::class, 'dashboard']);
     Route::get('/profile', [General::class, 'profile']);
@@ -50,7 +52,6 @@ Route::group(['middleware' => ['auth', 'ceklevel:Administrator,user,penilai']], 
 
 // ADMIN ROUTE
 Route::group(['middleware' => ['auth', 'ceklevel:user']], function () {
-
 });
 
 
@@ -60,11 +61,15 @@ Route::group(['middleware' => ['auth', 'ceklevel:Administrator']], function () {
         // GET REQUEST
         Route::get('/pengguna', [Admin::class, 'pengguna']);
         Route::get('/fetch_data', [Admin::class, 'fetchData']);
+        Route::get('/destination', [Admin::class, 'destination']);
+
+        // CRUD DESTINATION
+        Route::post('/tambah_destination', [Admin::class, 'tambahDestination']);
+        Route::post('/hapus_destination', [Admin::class, 'hapusDestination']);
 
         // CRUD PENGGUNA
         Route::post('/create_pengguna', [Admin::class, 'createPengguna']);
         Route::post('/update_pengguna', [Admin::class, 'updatePengguna']);
         Route::post('/delete_pengguna', [Admin::class, 'deletePengguna']);
-
     });
 });
