@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\Destination;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -27,6 +27,13 @@ class Admin extends Controller
     {
         $data['pengguna'] = $this->userModel->getAllUser();
         return view('pages.pengguna.index', $data);
+    }
+
+
+    public function destination()
+    {
+        $data['destination'] = Destination::all();
+        return view('pages.destination.index', $data);
     }
 
 
@@ -71,6 +78,37 @@ class Admin extends Controller
             return view('pages.pengguna.users_data', $data)->render();
         }
     }
+
+    // CRUD DESTINATION
+    public function tambahDestination(Request $request)
+    {
+
+        $image = $request->file('gambar_destination');
+        $imageName = uniqid() . '.' . '.jpg';
+        $image->move(public_path('data/gambar_destination/'), $imageName);
+
+        Destination::create([
+            'nama_destination' => $request->nama_destination,
+            'harga_tiket' => $request->harga_tiket,
+            'link_pemetaan' => $request->link_pemetaan,
+            'ket_pemetaan' => $request->ket_pemetaan,
+            'deskripsi_destination' => $request->deskripsi_destination,
+            'gambar_destination' => $imageName,
+        ]);
+        return redirect()->back()->with('message', 'Destinasi Berhasil di tambahkan');
+    }
+
+    public function hapusDestination(Request $request)
+    {
+        Destination::where([
+            ['id_destination', '=', $request->id_destination]
+        ])->delete();
+
+        return 1;
+    }
+
+
+    // CRUD PENGGUNA
 
     public function createPengguna(Request $request)
     {

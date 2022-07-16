@@ -30,6 +30,8 @@
                     <li id="liManajemenPengguna"><a class="nav-link" href="/admin/pengguna">Manajemen Pengguna</a></li>
                 </ul>
             </li>
+            <li class="" id="liDestination"><a class="nav-link" href="{{ URL::to('/admin/destination') }}"><i
+                        class="fas fa-mountain"></i> <span>Destination</span></a></li>
 
             {{-- END OF MENU ADMIN --}}
             @endif

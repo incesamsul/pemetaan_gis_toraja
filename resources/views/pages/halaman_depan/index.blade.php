@@ -1,9 +1,9 @@
 @extends('layouts_halaman_depan.v_template')
 
 @section('content')
- <!-- Login Form -->
+<!-- Login Form -->
 
- <div class="login-form">
+<div class="login-form">
     <div class="login-top">
         <span class="close">&times;</span>
     </div>
@@ -32,7 +32,7 @@
 
 <section class="section-header">
     <div class="section-header-image">
-        <img src="{{ asset("img/home/header.jpg") }}" alt="Header">
+        <img src="{{ asset('img/home/header.jpg') }}" alt="Header">
     </div>
     <div class="container">
         <div class="section-header-inner">
@@ -55,7 +55,9 @@
 <section class="section section-about">
     <div class="about-head slides">
         <h3>toraja Travel Time</h3>
-        <p><b>Bavel</b> merupakan singkatan dari <b>toraja Travel Time</b> merupakan website yang bertujuan mengenalkan pesona keindahan toraja mulai dari Wisata dan Budaya . Tidak hanya sarana untuk memperkanalkan, <b>Bavel</b> juga menyediakan berbagai
+        <p><b>Bavel</b> merupakan singkatan dari <b>toraja Travel Time</b> merupakan website yang bertujuan mengenalkan
+            pesona keindahan toraja mulai dari Wisata dan Budaya . Tidak hanya sarana untuk memperkanalkan, <b>Bavel</b>
+            juga menyediakan berbagai
             layanan pemesanan tiket mulai tiket Tour dan tempat penginapan di sekitar toraja </p>
     </div>
     <div class="about-body">
@@ -98,7 +100,8 @@
     <div class="section-head">
         <div class="section-line"></div>
         <h3 class="section-title">DISCOVERY toraja</h3>
-        <p class="section-subtitle">Adalah sebuah warisan indahnya alam dan budaya yang masih terjaga di toraja yang dapat anda jelajahi</p>
+        <p class="section-subtitle">Adalah sebuah warisan indahnya alam dan budaya yang masih terjaga di toraja yang
+            dapat anda jelajahi</p>
     </div>
     <div class="section-discover-body slides">
         <div class="col">
@@ -164,9 +167,9 @@
         <div class="row">
             <div class="col-video">
                 <video controls>
-              <source src="{{ asset('img/home/explore.mp4') }}" type="video/mp4">
-              Your browser does not support HTML5 video.
-            </video>
+                    <source src="{{ asset('img/home/explore.mp4') }}" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
             </div>
             <div class="col-image">
                 <div class="row">
@@ -206,41 +209,42 @@
     <div class="section-head">
         <div class="section-line"></div>
         <h3 class="section-title">5 RECOMENDED TOURS</h3>
-        <p class="section-subtitle">Wisata terbaik berdasarkan tingkat ketertarikan wisatawan toraja dan kepopuleran wisata tersebut</p>
+        <p class="section-subtitle">Wisata terbaik berdasarkan tingkat ketertarikan wisatawan toraja dan kepopuleran
+            wisata tersebut</p>
     </div>
     <div class="section-tour-body">
         <div class="row">
             <div class="col-1 slides">
-                <img src="{{ asset('img/home/toraja.jpg') }}">
+                <img src="{{ asset('data/gambar_destination/'.$rekomendasi1->gambar_destination) }}">
                 <div class="overlay">
                     <div class="caption">
                         <div class="caption-text">
-                            <p>Wisata 1</p>
+                            <p>{{ $rekomendasi1->nama_destination }}</p>
                             <span class="fas fa-star checked"></span>
                             <span class="fas fa-star checked"></span>
                             <span class="fas fa-star checked"></span>
                             <span class="fas fa-star"></span>
                             <span class="fas fa-star"></span> <br>
                             <span class="fas fa-rupiah-sign"></span> &nbsp;
-                            <b>15.000</b>
+                            <b>{{ number_format($rekomendasi1->harga_tiket) }}</b>
                             <a href="single-destination.html" class="btn btn-orange btn-round right">See Details</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-1 slides">
-                <img src="{{ asset('img/home/toraja.jpg') }}">
+                <img src="{{ asset('data/gambar_destination/'.$rekomendasi2->gambar_destination) }}">
                 <div class="overlay">
                     <div class="caption">
                         <div class="caption-text">
-                            <p>Wisata 2</p>
+                            <p>{{ $rekomendasi2->nama_destination }}</p>
                             <span class="fas fa-star checked"></span>
                             <span class="fas fa-star checked"></span>
                             <span class="fas fa-star checked"></span>
                             <span class="fas fa-star"></span>
                             <span class="fas fa-star"></span> <br>
                             <span class="fas fa-rupiah-sign"></span> &nbsp;
-                            <b>15.000</b>
+                            <b>{{ number_format($rekomendasi2->harga_tiket) }}</b>
                             <a href="single-destination.html" class="btn btn-orange btn-round right">See Details</a>
                         </div>
                     </div>
@@ -249,55 +253,55 @@
         </div>
         <div class="row">
             <div class="col-2 slides">
-                <img src="{{ asset('img/home/toraja.jpg') }}">
+                <img src="{{ asset('data/gambar_destination/'.$rekomendasi3->gambar_destination) }}">
                 <div class="overlay">
                     <div class="caption">
                         <div class="caption-text">
-                            <p>Wisata 3</p>
-                            <span class="fas fa-star checked"></span>
-                            <span class="fas fa-star checked"></span>
-                            <span class="fas fa-star checked"></span>
-                            <span class="fas fa-star checked"></span>
-                            <span class="fas fa-star"></span> <br>
-                            <span class="fas fa-rupiah-sign"></span> &nbsp;
-                            <b> 15.000 - 60.000</b> <br>
-                            <a href="single-destination.html" class="btn btn-orange btn-round">See Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-2 slides">
-                <img src="{{ asset('img/home/toraja.jpg') }}">
-                <div class="overlay">
-                    <div class="caption">
-                        <div class="caption-text">
-                            <p>Wisata 4</p>
+                            <p>{{ $rekomendasi3->nama_destination }}</p>
                             <span class="fas fa-star checked"></span>
                             <span class="fas fa-star checked"></span>
                             <span class="fas fa-star checked"></span>
                             <span class="fas fa-star"></span>
                             <span class="fas fa-star"></span> <br>
                             <span class="fas fa-rupiah-sign"></span> &nbsp;
-                            <b> 75.000 - 150.000</b> <br>
-                            <a href="single-destination.html" class="btn btn-orange btn-round">See Details</a>
+                            <b>{{ number_format($rekomendasi3->harga_tiket) }}</b>
+                            <a href="single-destination.html" class="btn btn-orange btn-round right">See Details</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-2 slides">
-                <img src="{{ asset('img/home/toraja.jpg') }}">
+                <img src="{{ asset('data/gambar_destination/'.$rekomendasi4->gambar_destination) }}">
                 <div class="overlay">
                     <div class="caption">
                         <div class="caption-text">
-                            <p>Wisata 5</p>
+                            <p>{{ $rekomendasi4->nama_destination }}</p>
                             <span class="fas fa-star checked"></span>
                             <span class="fas fa-star checked"></span>
                             <span class="fas fa-star checked"></span>
                             <span class="fas fa-star"></span>
                             <span class="fas fa-star"></span> <br>
                             <span class="fas fa-rupiah-sign"></span> &nbsp;
-                            <b> 10</b> <br>
-                            <a href="single-destination.html" class="btn btn-orange btn-round">See Details</a>
+                            <b>{{ number_format($rekomendasi4->harga_tiket) }}</b>
+                            <a href="single-destination.html" class="btn btn-orange btn-round right">See Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 slides">
+                <img src="{{ asset('data/gambar_destination/'.$rekomendasi5->gambar_destination) }}">
+                <div class="overlay">
+                    <div class="caption">
+                        <div class="caption-text">
+                            <p>{{ $rekomendasi5->nama_destination }}</p>
+                            <span class="fas fa-star checked"></span>
+                            <span class="fas fa-star checked"></span>
+                            <span class="fas fa-star checked"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span> <br>
+                            <span class="fas fa-rupiah-sign"></span> &nbsp;
+                            <b>{{ number_format($rekomendasi5->harga_tiket) }}</b>
+                            <a href="single-destination.html" class="btn btn-orange btn-round right">See Details</a>
                         </div>
                     </div>
                 </div>
@@ -316,7 +320,9 @@
         <div id='mySwipe' class='swipe'>
             <div class="swipe-wrap">
                 <div class="blockquote">
-                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
                     <div class="blockquote-user">
                         <div class="blockquote-avatar">
@@ -326,7 +332,9 @@
                     </div>
                 </div>
                 <div class="blockquote">
-                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
                     <div class="blockquote-user">
                         <div class="blockquote-avatar">
@@ -336,7 +344,9 @@
                     </div>
                 </div>
                 <div class="blockquote">
-                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
                     <div class="blockquote-user">
                         <div class="blockquote-avatar">
@@ -348,8 +358,10 @@
             </div>
         </div>
         <div class="overlay-btn">
-            <button class="btn-orange btn-bullet" onclick='mySwipe.prev()'><span class="fas fa-arrow-left"></span></button> &nbsp;
-            <button class="btn-orange btn-bullet" onclick='mySwipe.next()'><span class="fas fa-arrow-right"></span></button>
+            <button class="btn-orange btn-bullet" onclick='mySwipe.prev()'><span
+                    class="fas fa-arrow-left"></span></button> &nbsp;
+            <button class="btn-orange btn-bullet" onclick='mySwipe.next()'><span
+                    class="fas fa-arrow-right"></span></button>
         </div>
     </div>
 </section>
@@ -403,4 +415,3 @@
 
 </script>
 @endsection
-

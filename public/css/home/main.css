@@ -60,8 +60,8 @@
 /* -- Important Style */
 
 *,
- ::after,
- ::before {
+::after,
+::before {
     box-sizing: border-box;
 }
 
@@ -280,6 +280,7 @@ hr {
         opacity: 0;
         transform: translateY(90%);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0%);
@@ -292,6 +293,7 @@ hr {
         opacity: 0;
         transform: translateY(90%);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0%);
@@ -727,6 +729,7 @@ hr {
     .section-header-title-xs {
         display: block;
     }
+
     .section-header-title {
         display: none;
     }
@@ -954,6 +957,7 @@ hr {
     .section-explore {
         height: 40vh;
     }
+
     .section-explore .overlay .caption img {
         width: 90%;
     }
@@ -1197,7 +1201,7 @@ hr {
 /* Section Tour */
 
 .section-tour {
-    background: url("../../img/bg-2.jpg");
+    background: url("../../img/home/bg-2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1250,6 +1254,7 @@ hr {
     .section-tour-body .row .col-1 {
         width: 95%;
     }
+
     .section-tour-body .row .col-2 {
         width: 95%;
     }
@@ -1316,6 +1321,7 @@ hr {
 }
 
 @media (max-width: 420px) {
+
     .single-body .col .overlay .caption,
     .section-tour-body .row .col-2 .overlay .caption,
     .section-tour-body .row .col-1 .overlay .caption {
@@ -1500,6 +1506,7 @@ hr {
 }
 
 @media (max-width: 420px) {
+
     .section-news .row .col,
     .section-news .row .col-2 {
         width: 95%;
@@ -1586,6 +1593,7 @@ hr {
     .section-footer .row .col-left {
         width: 90%;
     }
+
     .section-footer .row .col-right {
         padding-top: 20px;
         width: 50%;
@@ -1779,6 +1787,7 @@ ul.breadcrumb li a:hover {
     .single-head .col img {
         display: none;
     }
+
     .single-body .col {
         width: 100%;
     }
@@ -1889,6 +1898,7 @@ ul.breadcrumb li a:hover {
     .section-archive .content .content-img img {
         position: static;
     }
+
     .section-archive .content .content-img span {
         display: none;
     }
@@ -2251,6 +2261,7 @@ ul.breadcrumb li a:hover {
     .section-ticket .body .panel .panel-body form {
         flex-wrap: wrap;
     }
+
     .section-ticket .body .panel .panel-body form .input-form {
         width: 100%;
     }
