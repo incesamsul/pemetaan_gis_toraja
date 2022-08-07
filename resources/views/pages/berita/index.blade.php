@@ -6,7 +6,7 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header d-flex  justify-content-between">
-                    <h4>Data Destinasi</h4>
+                    <h4>Data Berita</h4>
                     <div class="table-tools d-flex justify-content-around ">
                         <input type="text" class="form-control card-form-header mr-3"
                             placeholder="Cari Data Pengguna ..." id="cari-data-pengguna">
@@ -15,7 +15,7 @@
                             <option value=""></option>
                         </select>
                         <button type="button" class="btn bg-main text-white float-right" data-toggle="modal" id="addUserBtn"
-                            data-target="#modalDestinasi"><i class="fas fa-plus"></i></button>
+                            data-target="#modalberita"><i class="fas fa-plus"></i></button>
                     </div>
                 </div>
                 <div class="card-body p-0">
@@ -24,20 +24,18 @@
                             <tr>
                                 <th width="5%" class="sorting" data-sorting_type="asc" data-column_name="id"
                                     style="cursor: pointer">ID <span id="id_icon"></span></th>
-                                <td>Nama destinasi</td>
-                                <td>Harga tiket</td>
-                                <td>Deskripsi</td>
+                                    <td>tgl berita</td>
+                                <td>judul berita</td>
                                 <td>Detail</td>
                                 <td></td>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($destination as $row)
+                            @foreach ($berita as $row)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $row->nama_destination }}</td>
-                                <td>RP. {{ number_format($row->harga_tiket ) }}</td>
-                                <td>{{ $row->deskripsi_destination }}</td>
+                                <td>{{ $row->tgl_berita }}</td>
+                                <td>{{ $row->judul_berita }}</td>
                                 <td>
                                     <button class="btn bg-main text-white">Detail</button>
                                 </td>
@@ -48,9 +46,9 @@
                                             <i class="fas fa-ellipsis-v"></i>
                                         </i>
                                         <div class="dropdown-menu">
-                                            <a data-destinasi='@json($row)' class="dropdown-item edit" href="#"><i
+                                            <a data-berita='@json($row)' class="dropdown-item edit" href="#"><i
                                                     class="fas fa-pen"> Edit</i></a>
-                                            <a data-id_destination="{{ $row->id_destination }}"
+                                            <a data-id_berita="{{ $row->id_berita }}"
                                                 class="dropdown-item hapus" href="#"><i class="fas fa-trash">
                                                     Hapus</i></a>
                                         </div>
@@ -71,12 +69,12 @@
 
 
 <!-- Modal -->
-{{-- MODAL TAMBAH DESTINASI --}}
-<div class="modal fade" id="modalDestinasi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+{{-- MODAL TAMBAH berita --}}
+<div class="modal fade" id="modalberita" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="ModalLabel">Tambah Destinasi</h5>
+                <h5 class="modal-title" id="ModalLabel">Tambah berita</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -84,34 +82,26 @@
 
             <div class="modal-body" id="main-body">
 
-                <form id="formPengguna" action="{{ URL::to('/admin/tambah_destination') }}" method="POST"
+                <form id="formPengguna" action="{{ URL::to('/admin/tambah_berita') }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label for="nama_destination">nama destinasi</label>
+                        <label for="judul_berita">Judul berita</label>
                         <input type="hidden" class="form-control" name="id" id="id">
-                        <input type="text" class="form-control" name="nama_destination" required id="nama_destination">
+                        <input type="text" class="form-control" name="judul_berita" required id="judul_berita">
                     </div>
                     <div class="form-group">
-                        <label for="harga_tiket">harga tiket</label>
-                        <input type="text" class="form-control" name="harga_tiket" required id="harga_tiket">
+                        <label for="tgl_berita">Tanggal berita</label>
+                        <input type="date" class="form-control" name="tgl_berita" required id="tgl_berita">
                     </div>
                     <div class="form-group">
-                        <label for="link_pemetaan">link pemetaan</label>
-                        <input type="text" class="form-control" name="link_pemetaan" required id="link_pemetaan">
+                        <label for="gambar_berita">Gambar berita</label>
+                        <input type="file" class="form-control" name="gambar_berita" required id="gambar_berita">
                     </div>
                     <div class="form-group">
-                        <label for="ket_pemetaan">ket pemetaan</label>
-                        <input type="text" class="form-control" name="ket_pemetaan" required id="ket_pemetaan">
-                    </div>
-                    <div class="form-group">
-                        <label for="deskripsi_destination">deskripsi destinasi</label>
-                        <textarea required class="form-control" name="deskripsi_destination"
-                            id="deskripsi_destination"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="gambar_destination">gambar_destination</label>
-                        <input required type="file" class="form-control" name="gambar_destination">
+                        <label for="isi_berita">isi berita</label>
+                        <textarea required class="form-control" name="isi_berita"
+                            id="isi_berita"></textarea>
                     </div>
             </div>
             <div class="modal-footer">
@@ -132,7 +122,7 @@
 
         // TOMBOL HAPUS USER
         $('.table-user tbody').on('click', 'tr td a.hapus', function() {
-            let idDestination = $(this).data('id_destination');
+            let idberita = $(this).data('id_berita');
             Swal.fire({
                 title: 'Apakah yakin?'
                 , text: "Data tidak bisa kembali lagi!"
@@ -147,11 +137,11 @@
                         headers: {
                             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                         }
-                        , url: '/admin/hapus_destination'
+                        , url: '/admin/hapus_berita'
                         , method: 'post'
                         , dataType: 'json'
                         , data: {
-                            id_destination: idDestination
+                            id_berita: idberita
                         }
                         , success: function(data) {
                             if (data == 1) {
@@ -171,8 +161,7 @@
 
     });
 
-    $('#liDestination').addClass('active');
-
+    $('#liBerita').addClass('active');
 
 </script>
 @endsection

@@ -22,11 +22,15 @@ h3,
 h4,
 h5,
 h6 {
-    color: #191D21 !important;
+    color: #EA1350 !important;
 }
 
 .navbar-bg {
-    background-color: #191D21 !important;
+    background-color: #EA1350 !important;
+}
+
+.bg-main {
+    background-color: #EA1350;
 }
 
 textarea {

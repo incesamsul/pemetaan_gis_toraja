@@ -16,7 +16,7 @@
                     </li>
                     <li class="media">
                         <div class="media-body">
-                            <a href="" class="btn btn-dark btn-lg btn-block btn-icon-split" data-toggle="modal" data-target="#modal">
+                            <a href="" class="btn bg-main text-white btn-lg btn-block btn-icon-split" data-toggle="modal" data-target="#modal">
                                 <i class="fas fa-camera"></i> Ganti Foto Profile
                             </a>
                         </div>
@@ -48,7 +48,7 @@
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" placeholder="Ganti Kata sandi" aria-label="Recipient's username" aria-describedby="basic-addon2">
                                 <div class="input-group-append">
-                                    <button class="btn btn-dark" type="button">Ganti</button>
+                                    <button class="btn bg-main text-white" type="button">Ganti</button>
                                 </div>
                             </div>
                         </div>
@@ -118,10 +118,10 @@
                         </li>
                         <li class="media">
                             <div class="media-body">
-                                <a href="" class="btn btn-dark btn-lg btn-block btn-icon-split" data-toggle="modal" data-target="#modal">
+                                <a href="" class="btn bg-main text-white btn-lg btn-block btn-icon-split" data-toggle="modal" data-target="#modal">
                                     <i class="fas fa-camera"></i> Ganti Foto Profile
                                 </a>
-                                {{-- <a href="" class="btn btn-dark btn-lg btn-block btn-icon-split">
+                                {{-- <a href="" class="btn bg-main text-white btn-lg btn-block btn-icon-split">
                                     <i class="fas fa-pen"></i> Edit Biodata
                                 </a>  --}}
                             </div>

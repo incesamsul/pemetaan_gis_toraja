@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Berita;
 use App\Models\Destination;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -34,6 +35,12 @@ class Admin extends Controller
     {
         $data['destination'] = Destination::all();
         return view('pages.destination.index', $data);
+    }
+
+    public function berita()
+    {
+        $data['berita'] = Berita::all();
+        return view('pages.berita.index', $data);
     }
 
 
@@ -77,6 +84,23 @@ class Admin extends Controller
 
             return view('pages.pengguna.users_data', $data)->render();
         }
+    }
+
+    // CRUD BERITA
+    public function tambahBerita(Request $request)
+    {
+
+        $image = $request->file('gambar_berita');
+        $imageName = uniqid() . '.' . '.jpg';
+        $image->move(public_path('data/gambar_berita/'), $imageName);
+
+        Berita::create([
+            'judul_berita' => $request->judul_berita,
+            'tgl_berita' => $request->tgl_berita,
+            'isi_berita' => $request->isi_berita,
+            'gambar_berita' => $imageName,
+        ]);
+        return redirect()->back()->with('message', 'berita Berhasil di tambahkan');
     }
 
     // CRUD DESTINATION

@@ -30,6 +30,9 @@ Route::get('/logout', [LoginController::class, 'logout']);
 Route::get('/', [Home::class, 'home']);
 Route::get('/destination', [Home::class, 'destination']);
 Route::get('/single_destination/{id_destination}', [Home::class, 'singleDestination']);
+Route::get('/berita', [Home::class, 'berita']);
+Route::get('/berita/{id_berita}', [Home::class, 'singleBerita']);
+Route::get('/full_map', [Home::class, 'fullMap']);
 
 
 Route::get('/tentang_aplikasi', [Home::class, 'tentangAplikasi']);
@@ -62,6 +65,12 @@ Route::group(['middleware' => ['auth', 'ceklevel:Administrator']], function () {
         Route::get('/pengguna', [Admin::class, 'pengguna']);
         Route::get('/fetch_data', [Admin::class, 'fetchData']);
         Route::get('/destination', [Admin::class, 'destination']);
+        Route::get('/berita', [Admin::class, 'berita']);
+
+        // CRUD DESTINATION
+        Route::post('/tambah_berita', [Admin::class, 'tambahBerita']);
+        Route::post('/hapus_berita', [Admin::class, 'hapusBerita']);
+
 
         // CRUD DESTINATION
         Route::post('/tambah_destination', [Admin::class, 'tambahDestination']);

@@ -32,6 +32,8 @@
             </li>
             <li class="" id="liDestination"><a class="nav-link" href="{{ URL::to('/admin/destination') }}"><i
                         class="fas fa-mountain"></i> <span>Destination</span></a></li>
+            <li class="" id="liBerita"><a class="nav-link" href="{{ URL::to('/admin/berita') }}"><i
+                        class="fas fa-newspaper"></i> <span>Berita</span></a></li>
 
             {{-- END OF MENU ADMIN --}}
             @endif
@@ -45,7 +47,7 @@
         </ul>
 
         <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
-            <a href="{{ URL::to('/logout') }}" class="btn btn-dark btn-lg btn-block btn-icon-split">
+            <a href="{{ URL::to('/logout') }}" class="btn bg-main text-white btn-lg btn-block btn-icon-split">
                 <i class="fas fa-sign-out-alt"></i> Logout
             </a>
         </div>

@@ -9,7 +9,7 @@
     </div>
     <div class="login">
         <h3 class="text-center">
-            Bavel Log In
+            Travel Log In
         </h3>
         <div class="form-input">
             <label>Email</label> <br>
@@ -55,8 +55,8 @@
 <section class="section section-about">
     <div class="about-head slides">
         <h3>toraja Travel Time</h3>
-        <p><b>Bavel</b> merupakan singkatan dari <b>toraja Travel Time</b> merupakan website yang bertujuan mengenalkan
-            pesona keindahan toraja mulai dari Wisata dan Budaya . Tidak hanya sarana untuk memperkanalkan, <b>Bavel</b>
+        <p><b>Travel</b> merupakan singkatan dari <b>toraja Travel Time</b> merupakan website yang bertujuan mengenalkan
+            pesona keindahan toraja mulai dari Wisata dan Budaya . Tidak hanya sarana untuk memperkanalkan, <b>Travel</b>
             juga menyediakan berbagai
             layanan pemesanan tiket mulai tiket Tour dan tempat penginapan di sekitar toraja </p>
     </div>
@@ -375,33 +375,17 @@
     </div>
     <div class="section-news-body">
         <div class="row slides">
+            @foreach ($berita_terbaru as $row)
             <div class="col">
-                <img src="{{ asset('img/home/toraja.jpg') }}">
+                <img src="{{ asset('data/gambar_berita/'. $row->gambar_berita) }}">
                 <div class="overlay">
                     <a href="single-news.html">
-                        <p class="text-top"> 10 Ribu Sepeda Tua dari 30 Negara Kumpul di toraja</p>
+                        <p class="text-top"> {{ $row->judul_berita }}</p>
                     </a>
-                    <p class="text-bottom">20 April 2018</p>
+                    <p class="text-bottom">{{ $row->tgl_berita }}</p>
                 </div>
             </div>
-            <div class="col-2">
-                <img src="{{ asset('img/home/toraja.jpg') }}">
-                <div class="overlay">
-                    <a href="single-news.html">
-                        <p class="text-top">Keistimewaan toraja di Mata Dubes Mesir</p>
-                    </a>
-                    <p class="text-bottom">20 April 2018</p>
-                </div>
-            </div>
-            <div class="col">
-                <img src="{{ asset('img/home/toraja.jpg') }}">
-                <div class="overlay">
-                    <a href="single-news.html">
-                        <p class="text-top">Aksi Polres Badung Tangkal Hoaks</p>
-                    </a>
-                    <p class="text-bottom">20 April 2018</p>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>

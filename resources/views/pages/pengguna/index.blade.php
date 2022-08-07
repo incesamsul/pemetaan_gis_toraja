@@ -13,7 +13,7 @@
                             <option value="" selected>Filter</option>
                             <option value=""></option>
                         </select>
-                        <button type="button" class="btn btn-dark float-right" data-toggle="modal" id="addUserBtn" data-target="#modalPengguna"><i class="fas fa-plus"></i></button>
+                        <button type="button" class="btn bg-main text-white float-right" data-toggle="modal" id="addUserBtn" data-target="#modalPengguna"><i class="fas fa-plus"></i></button>
                     </div>
                 </div>
                 <div class="card-body p-0">
@@ -95,7 +95,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                <button type="submit" class="btn btn-dark" id="modalBtn">Tambah</button>
+                <button type="submit" class="btn bg-main text-white" id="modalBtn">Tambah</button>
                 </form>
             </div>
         </div>
