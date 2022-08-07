@@ -33,9 +33,9 @@
     <div class="overlay">
         <div class="header-title">
             <h3>Tourism Destinations</h3>
-            <span class="ion-record"></span>&nbsp;
-            <span class="ion-record"></span>&nbsp;
-            <span class="ion-record"></span>
+            <span class="fas fa-record-vinyl"></span>&nbsp;
+            <span class="fas fa-record-vinyl"></span>&nbsp;
+            <span class="fas fa-record-vinyl"></span>
         </div>
 </section>
 </section>
@@ -87,7 +87,7 @@
 </section>
 
 <ul class="pagination">
-    <a href="#" class="pagination-arrow arrow-left">
+    <a href="#" class="fas fa-arrow-left">
         <span class="ion-ios-arrow-back"></span>
     </a>
     <a class="pagin-number active">1</a>
@@ -96,7 +96,7 @@
         <a href="#" class="pagin-number">4</a>
         <a href="#" class="pagin-number">5</a>
         <a href="#" class="pagin-arrow arrow-right">
-            <span class="ion-ios-arrow-forward"></span>
+            <span class="fas fa-arrow-right"></span>
         </a>
 </ul>
 

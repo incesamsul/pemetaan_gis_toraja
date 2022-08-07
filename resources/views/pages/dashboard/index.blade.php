@@ -5,8 +5,8 @@
     <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-12">
             <div class="card card-statistic-2">
-                <div class="card-icon shadow-dark bg-dark">
-                    <i class="fas fa-graduation-cap"></i>
+                <div class="card-icon shadow-dark bg-main">
+                    <i class="fas fa-mountain"></i>
                 </div>
                 <div class="card-wrap">
                     <div class="card-header">
@@ -20,7 +20,7 @@
         </div>
         <div class="col-lg-4 col-md-4 col-sm-12">
             <div class="card card-statistic-2">
-                <div class="card-icon shadow-dark bg-dark">
+                <div class="card-icon shadow-dark bg-main">
                     <i class="fas fa-calendar-day"></i>
                 </div>
                 <div class="card-wrap">
@@ -35,7 +35,7 @@
         </div>
         <div class="col-lg-4 col-md-4 col-sm-12">
             <div class="card card-statistic-2">
-                <div class="card-icon shadow-dark bg-dark">
+                <div class="card-icon shadow-dark bg-main">
                     <i class="fas fa-clock"></i>
                 </div>
                 <div class="card-wrap">

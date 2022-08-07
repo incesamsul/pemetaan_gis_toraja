@@ -4,8 +4,8 @@
         <div class="texture-handler-top"></div>
         <div class="row">
             <div class="col-left">
-                <p>Copyright &copy; 2017</p>
-                <p>Jl. Panglima Sudirman, Caruban Madiun <br> Phone : +62 851 2343 9090 <br> Email : contact@bavel.com </p>
+                <p>Copyright &copy; 2022</p>
+                <p>Jl. bung, makassar <br> Phone : +62 851 2343 9090 <br> Email : nensi@mail.com </p>
                 <a href="https://www.facebook.com/besttoraja/" target="_blank"><span class="ion-social-facebook icon-social"></span></a>
                 <a href="https://www.instagram.com/exploretoraja/" target="_blank"><span class="ion-social-instagram icon-social"></span></a>
                 <a href="https://twitter.com/hashtag/exploretoraja?lang=en" target="_blank"><span class="ion-social-twitter icon-social"></span></a>
@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>Created With <span class="ion-heart red"></span> to create a Lovable Website</p>
+            <p>Created With <span class="fas fa-heart red"></span> to toraja's people</p>
         </div>
     </section>
 
