@@ -19,6 +19,4 @@ INSERT INTO `profile` (`id_profile`, `id_user`, `jenis_kelamin`, `tempat_lahir`,
 
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `role`, `foto`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@mail.com', NULL, '$2y$10$N6nmGrHUtLAw5/5SlPZqEehn.S5KDNDFHf1yuW184mEw5zLWhVeLm', 'Administrator', '61b5cf20cb753.jpg', NULL, '2021-11-24 09:06:43', '2021-12-11 18:29:52'),
-(2, 'user', 'user@mail.com', NULL, '$2y$10$rzbEl5L/96hsivMG1QDkp.Y6kNXGIDUOMmYxnuWSBK8EmFPxpoHn6', 'user', '61b5dcc0ab820.png', NULL, '2021-11-24 13:15:14', '2021-12-11 19:28:00'),
-(3, 'penilai1', 'penilai1@mail.com', NULL, '$2y$10$nmqzXCRDpJb9asVkZKvsduSHMsMlPMn7g.pFz0Lq6SIIGh7EaIxda', '', '', NULL, '2021-11-26 02:13:42', '2021-11-26 02:13:42');
+(1, 'admin', 'admin@mail.com', NULL, '$2y$10$N6nmGrHUtLAw5/5SlPZqEehn.S5KDNDFHf1yuW184mEw5zLWhVeLm', 'Administrator', '61b5cf20cb753.jpg', NULL, '2021-11-24 09:06:43', '2021-12-11 18:29:52');
