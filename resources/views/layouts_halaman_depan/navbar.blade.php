@@ -10,7 +10,7 @@
             <ul>
                 <li><a href="{{ URL::to('/destination') }}">Destination</a></li>
                 <li><a href="/berita">Berita</a></li>
-                <li><a data-slide="slides" data-slide-target="#discover">Discover</a></li>
+                <li><a data-slide="slides" data-slide-target="{{ URL::to('/kuliner') }}">Kuliner</a></li>
                 <li><a href="/full_map"> Full map</a></li>
                 {{-- <li><button class="btn-login" id="openLogin">LOGIN</button></li> --}}
                 <li><button data-path="{{ URL::to('/login') }}" class="btn-login">LOGIN</button></li>

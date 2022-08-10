@@ -32,10 +32,10 @@
 
 <section class="section-ticket">
     <div class="header">
-        <img src="{{ asset('data/gambar_destination/'.$destination->gambar_destination) }}">
+        <img src="{{ asset('data/gambar_penginapan/'.$penginapan->gambar_penginapan) }}">
         <div class="overlay">
             <div class="desc">
-                <h3>{{ $destination->nama_destination }}</h3>
+                <h3>{{ $penginapan->nama_penginapan }}</h3>
                 <span class="fas fa-star checked"></span>
                 <span class="fas fa-star checked"></span>
                 <span class="fas fa-star checked"></span>
@@ -68,7 +68,7 @@
                     </div>
                     <div class="col-2">
                         <b>Star From</b>
-                        <h2><b style="color: #f25601">Rp. {{ number_format($destination->harga_tiket) }} </b><small>/ Pax</small></h2> <br>
+                        <h2><b style="color: #f25601">Rp. {{ number_format($penginapan->harga_tiket) }} </b><small>/ Pax</small></h2> <br>
                         {{-- <a href="" data-slide="slides" data-slide-target="#find" class="btn-ticket btn-orange">Find Ticket</a> --}}
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                 <span class="fas fa-bookmark"></span>&nbsp; Description
             </div>
             <div class="panel-body">
-                <p>{{ $destination->deskripsi_destination }}</p>
+                <p>{{ $penginapan->deskripsi_penginapan }}</p>
             </div>
         </div>
 
@@ -91,7 +91,7 @@
                 <div class="col-1">
 
                     <iframe width="600" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                        title="toraja1" src="{{ $destination->link_pemetaan }}"></iframe>
+                        title="toraja1" src="{{ $penginapan->link_pemetaan }}"></iframe>
                 </div>
                 <div class="col-2">
                     <h3>Detail & peta Info</h3>

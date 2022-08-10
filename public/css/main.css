@@ -33,6 +33,10 @@ h6 {
     background-color: #EA1350;
 }
 
+.bg-main:hover {
+    background-color: #a0193f !important;
+}
+
 textarea {
     height: 100px !important;
 }

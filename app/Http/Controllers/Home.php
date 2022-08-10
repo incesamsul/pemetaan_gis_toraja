@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Berita;
 use App\Models\Destination;
+use App\Models\Kuliner;
+use App\Models\Penginapan;
 
 class Home extends Controller
 {
@@ -30,6 +32,18 @@ class Home extends Controller
         return view('pages.halaman_depan.destination', $data);
     }
 
+    public function penginapan()
+    {
+        $data['penginapan'] = Penginapan::all();
+        return view('pages.halaman_depan.penginapan', $data);
+    }
+
+    public function kuliner()
+    {
+        $data['kuliner'] = Kuliner::all();
+        return view('pages.halaman_depan.kuliner', $data);
+    }
+
     public function berita()
     {
         $data['berita'] = Berita::all();
@@ -40,6 +54,18 @@ class Home extends Controller
     {
         $data['destination'] = Destination::where('id_destination', $idDestination)->first();
         return view('pages.halaman_depan.single_destination', $data);
+    }
+
+    public function singlePenginapan($idPenginapan)
+    {
+        $data['penginapan'] = Penginapan::where('id_penginapan', $idPenginapan)->first();
+        return view('pages.halaman_depan.single_penginapan', $data);
+    }
+
+    public function singleKuliner($idKuliner)
+    {
+        $data['kuliner'] = Kuliner::where('id_kuliner', $idKuliner)->first();
+        return view('pages.halaman_depan.single_kuliner', $data);
     }
 
     public function singleBerita($idBerita)

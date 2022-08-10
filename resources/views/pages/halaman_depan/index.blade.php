@@ -117,22 +117,22 @@
             </a>
         </div>
         <div class="col">
-            <a href="culture.html">
-                <img src="{{ asset('img/home/toraja.jpg') }}">
+            <a href="{{ URL::to('/kuliner') }}">
+                <img src="https://images.pexels.com/photos/2010701/pexels-photo-2010701.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
                 <div class="caption" alt="Culture">
-                    <p>CULTURE</p>
+                    <p>KULINER</p>
                     <div class="line"></div>
                     <div class="caption-text">
-                        <p>Selain pemandangan yang indah toraja juga memiliki budaya yang mengesankan</p>
+                        <p>Temukan kuliner yang mnarik dan tak terlupakan</p>
                     </div>
                 </div>
             </a>
         </div>
         <div class="col">
-            <a href="event.html">
-                <img src="{{ asset('img/home/toraja.jpg') }}">
+            <a href="{{ URL::to('/berita') }}">
+                <img src="https://images.pexels.com/photos/518543/pexels-photo-518543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
                 <div class="caption" alt="Event">
-                    <p>EVENT</p>
+                    <p>BERITA</p>
                     <div class="line"></div>
                     <div class="caption-text">
                         <p>Ikuti dan ketahui event - event menarik yang berlangsung di toraja</p>
@@ -141,10 +141,10 @@
             </a>
         </div>
         <div class="col">
-            <a href="stay.html">
+            <a href="{{ URL::to('/penginapan') }}">
                 <img src="{{ asset('img/home/stay.jpg') }}">
                 <div class="caption" alt="Stay">
-                    <p>WHERE TO STAY</p>
+                    <p>PENGINAPAN</p>
                     <div class="line"></div>
                     <div class="caption-text">
                         <p>Temukan tempat penginapan terbaik dengan harga yang relatif murah</p>
@@ -166,33 +166,34 @@
     <div class="section-gallery-body">
         <div class="row">
             <div class="col-video">
-                <video controls>
+                <img src="https://media.istockphoto.com/photos/traditional-toraja-village-rantepao-tana-toraja-sulawesi-indonesia-picture-id1069936900?k=20&m=1069936900&s=612x612&w=0&h=8TlsbRIZ_Qn5Qs6LHaabebh7VRTtH9lurQYwQF_2my0=">
+                {{-- <video controls>
                     <source src="{{ asset('img/home/explore.mp4') }}" type="video/mp4">
                     Your browser does not support HTML5 video.
-                </video>
+                </video> --}}
             </div>
             <div class="col-image">
                 <div class="row">
                     <div class="col" onclick="window.location.href='gallery.html'">
-                        <img src="{{ asset('img/home/toraja.jpg') }}">
+                        <img src="https://thumbs.dreamstime.com/b/indonesia-sulawesi-tana-toraja-rice-terraces-19683539.jpg">
                         <div class="overlay">
                             <span class="ion-search"></span>
                         </div>
                     </div>
                     <div class="col" onclick="window.location.href='gallery.html'">
-                        <img src="{{ asset('img/home/toraja.jpg') }}">
+                        <img src="https://thumbs.dreamstime.com/b/toraja-22338934.jpg">
                         <div class="overlay">
                             <span class="ion-search"></span>
                         </div>
                     </div>
                     <div class="col" onclick="window.location.href='gallery.html'">
-                        <img src="{{ asset('img/home/toraja.jpg') }}">
+                        <img src="https://thumbs.dreamstime.com/b/traditional-burial-site-tana-toraja-lemo-south-sulawesi-indonesia-famous-coffins-placed-caves-carved-rock-guarded-46729291.jpg">
                         <div class="overlay">
                             <span class="ion-search"></span>
                         </div>
                     </div>
                     <div class="col" onclick="window.location.href='gallery.html'">
-                        <img src="{{ asset('img/home/toraja.jpg') }}">
+                        <img src="https://thumbs.dreamstime.com/b/coffins-16114205.jpg">
                         <div class="overlay">
                             <span class="ion-search"></span>
                         </div>

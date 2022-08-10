@@ -34,6 +34,10 @@
                         class="fas fa-mountain"></i> <span>Destination</span></a></li>
             <li class="" id="liBerita"><a class="nav-link" href="{{ URL::to('/admin/berita') }}"><i
                         class="fas fa-newspaper"></i> <span>Berita</span></a></li>
+            <li class="" id="liPenginapan"><a class="nav-link" href="{{ URL::to('/admin/penginapan') }}"><i
+                        class="fas fa-hotel"></i> <span>Penginapan</span></a></li>
+            <li class="" id="liKuliner"><a class="nav-link" href="{{ URL::to('/admin/kuliner') }}"><i
+                        class="fas fa-hamburger"></i> <span>Kuliner</span></a></li>
 
             {{-- END OF MENU ADMIN --}}
             @endif
