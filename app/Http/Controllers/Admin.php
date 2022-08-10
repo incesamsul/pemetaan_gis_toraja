@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Berita;
 use App\Models\Destination;
+use App\Models\Kuliner;
+use App\Models\Penginapan;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -41,6 +43,18 @@ class Admin extends Controller
     {
         $data['berita'] = Berita::all();
         return view('pages.berita.index', $data);
+    }
+
+    public function penginapan()
+    {
+        $data['penginapan'] = Penginapan::all();
+        return view('pages.penginapan.index', $data);
+    }
+
+    public function kuliner()
+    {
+        $data['kuliner'] = Kuliner::all();
+        return view('pages.kuliner.index', $data);
     }
 
 
@@ -86,6 +100,32 @@ class Admin extends Controller
         }
     }
 
+    // CRUD KULINER
+    public function tambahKuliner(Request $request)
+    {
+
+        $image = $request->file('gambar_kuliner');
+        $imageName = uniqid() . '.' . '.jpg';
+        $image->move(public_path('data/gambar_kuliner/'), $imageName);
+
+        Kuliner::create([
+            'nama_kuliner' => $request->nama_kuliner,
+            'harga' => $request->harga,
+            'deskripsi_kuliner' => $request->deskripsi_kuliner,
+            'gambar_kuliner' => $imageName,
+        ]);
+        return redirect()->back()->with('message', 'berita Berhasil di tambahkan');
+    }
+
+    public function hapusKuliner(Request $request)
+    {
+        Kuliner::where([
+            ['id_kuliner', '=', $request->id_kuliner]
+        ])->delete();
+
+        return 1;
+    }
+
     // CRUD BERITA
     public function tambahBerita(Request $request)
     {
@@ -101,6 +141,34 @@ class Admin extends Controller
             'gambar_berita' => $imageName,
         ]);
         return redirect()->back()->with('message', 'berita Berhasil di tambahkan');
+    }
+
+    // CRUD DESTINATION
+    public function tambahPenginapan(Request $request)
+    {
+
+        $image = $request->file('gambar_penginapan');
+        $imageName = uniqid() . '.' . '.jpg';
+        $image->move(public_path('data/gambar_penginapan/'), $imageName);
+
+        Penginapan::create([
+            'nama_penginapan' => $request->nama_penginapan,
+            'harga_tiket' => $request->harga_tiket,
+            'link_pemetaan' => $request->link_pemetaan,
+            'ket_pemetaan' => $request->ket_pemetaan,
+            'deskripsi_penginapan' => $request->deskripsi_penginapan,
+            'gambar_penginapan' => $imageName,
+        ]);
+        return redirect()->back()->with('message', 'penginapan Berhasil di tambahkan');
+    }
+
+    public function hapusPenginapan(Request $request)
+    {
+        Destination::where([
+            ['id_penginapan', '=', $request->id_penginapan]
+        ])->delete();
+
+        return 1;
     }
 
     // CRUD DESTINATION

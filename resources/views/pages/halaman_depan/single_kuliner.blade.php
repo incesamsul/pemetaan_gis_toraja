@@ -32,10 +32,10 @@
 
 <section class="section-ticket">
     <div class="header">
-        <img src="{{ asset('data/gambar_destination/'.$destination->gambar_destination) }}">
+        <img src="{{ asset('data/gambar_kuliner/'.$kuliner->gambar_kuliner) }}">
         <div class="overlay">
             <div class="desc">
-                <h3>{{ $destination->nama_destination }}</h3>
+                <h3>{{ $kuliner->nama_kuliner }}</h3>
                 <span class="fas fa-star checked"></span>
                 <span class="fas fa-star checked"></span>
                 <span class="fas fa-star checked"></span>
@@ -48,27 +48,27 @@
 
         <div class="panel">
             <div class="panel-header">
-                <span class="fas fa-clipboard"></span>&nbsp; Detail Ticket
+                <span class="fas fa-clipboard"></span>&nbsp; Detail Harga
             </div>
             <div class="panel-body">
                 <div class="detail">
                     <div class="col-1">
-                        <div class="col">
+                        {{-- <div class="col">
                             <span class="fas fa-clock"></span> 08.00 - 16.000
-                        </div>
-                        <div class="col">
+                        </div> --}}
+                        {{-- <div class="col">
                             <span class="fas fa-person-booth"></span> Min 1 | Max 15 Pax
-                        </div>
-                        <div class="col">
+                        </div> --}}
+                        {{-- <div class="col">
                             <span class="fas fa-car-alt"></span> Transport
-                        </div>
-                        <div class="col">
+                        </div> --}}
+                        {{-- <div class="col">
                             <span class="fas fa-pizza-slice"></span> Breakfast
-                        </div>
+                        </div> --}}
                     </div>
-                    <div class="col-2">
+                    <div class="col-6">
                         <b>Star From</b>
-                        <h2><b style="color: #f25601">Rp. {{ number_format($destination->harga_tiket) }} </b><small>/ Pax</small></h2> <br>
+                        <h2><b style="color: #f25601">Rp. {{ number_format($kuliner->harga) }} </b><small>/ Pax</small></h2> <br>
                         {{-- <a href="" data-slide="slides" data-slide-target="#find" class="btn-ticket btn-orange">Find Ticket</a> --}}
                     </div>
                 </div>
@@ -79,27 +79,7 @@
                 <span class="fas fa-bookmark"></span>&nbsp; Description
             </div>
             <div class="panel-body">
-                <p>{{ $destination->deskripsi_destination }}</p>
-            </div>
-        </div>
-
-        <div class="panel">
-            <div class="panel-header">
-                <span class="fas fa-map"></span>&nbsp; Peta
-            </div>
-            <div class="panel-body">
-                <div class="col-1">
-
-                    <iframe width="600" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                        title="toraja1" src="{{ $destination->link_pemetaan }}"></iframe>
-                </div>
-                <div class="col-2">
-                    <h3>Detail & peta Info</h3>
-                    <p>Loram1</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero minus laborum cum nisi
-                        perferendis, itaque laudantium dolores nesciunt dolore, alias enim eum qui fugiat ullam.
-                        Accusamus, culpa nulla? Harum, non!.</p>
-                </div>
+                <p>{{ $kuliner->deskripsi_kuliner }}</p>
             </div>
         </div>
 

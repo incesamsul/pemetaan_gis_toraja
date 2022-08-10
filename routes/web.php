@@ -33,6 +33,10 @@ Route::get('/single_destination/{id_destination}', [Home::class, 'singleDestinat
 Route::get('/berita', [Home::class, 'berita']);
 Route::get('/berita/{id_berita}', [Home::class, 'singleBerita']);
 Route::get('/full_map', [Home::class, 'fullMap']);
+Route::get('/penginapan', [Home::class, 'penginapan']);
+Route::get('/single_penginapan/{id_penginapan}', [Home::class, 'singlePenginapan']);
+Route::get('/kuliner', [Home::class, 'kuliner']);
+Route::get('/single_kuliner/{id_kuliner}', [Home::class, 'singleKuliner']);
 
 
 Route::get('/tentang_aplikasi', [Home::class, 'tentangAplikasi']);
@@ -66,10 +70,20 @@ Route::group(['middleware' => ['auth', 'ceklevel:Administrator']], function () {
         Route::get('/fetch_data', [Admin::class, 'fetchData']);
         Route::get('/destination', [Admin::class, 'destination']);
         Route::get('/berita', [Admin::class, 'berita']);
+        Route::get('/penginapan', [Admin::class, 'penginapan']);
+        Route::get('/kuliner', [Admin::class, 'kuliner']);
 
-        // CRUD DESTINATION
+        // CRUD PENGINAPAN
+        Route::post('/tambah_penginapan', [Admin::class, 'tambahPenginapan']);
+        Route::post('/hapus_penginapan', [Admin::class, 'hapusPenginapan']);
+
+        // CRUD BERITA
         Route::post('/tambah_berita', [Admin::class, 'tambahBerita']);
         Route::post('/hapus_berita', [Admin::class, 'hapusBerita']);
+
+        // CRUD KULINER
+        Route::post('/tambah_kuliner', [Admin::class, 'tambahKuliner']);
+        Route::post('/hapus_kuliner', [Admin::class, 'hapusKuliner']);
 
 
         // CRUD DESTINATION
