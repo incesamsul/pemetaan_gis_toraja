@@ -1,3 +1,48 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Waktu pembuatan: 10 Agu 2022 pada 20.22
+-- Versi server: 10.4.24-MariaDB
+-- Versi PHP: 8.0.19
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `pemetaan_gis_toraja`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `destination`
+--
+
+CREATE TABLE `destination` (
+  `id_destination` int(10) UNSIGNED NOT NULL,
+  `gambar_destination` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nama_destination` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `rating_destination` int(11) NOT NULL,
+  `harga_tiket` int(11) NOT NULL,
+  `deskripsi_destination` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `link_pemetaan` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ket_pemetaan` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data untuk tabel `destination`
+--
 
 INSERT INTO `destination` (`id_destination`, `gambar_destination`, `nama_destination`, `rating_destination`, `harga_tiket`, `deskripsi_destination`, `link_pemetaan`, `ket_pemetaan`, `created_at`, `updated_at`) VALUES
 (10, '62f3ee2f0d2aa..jpg', 'Patung Yesus Buntu Burake', 0, 0, 'Buka setiap hari jam 07.00 - 21.00', '//www.arcgis.com/apps/Embed/index.html?webmap=92036a2d18e4403da5e314b16af080ef&extent=119.8464,-3.1069,119.8913,-3.0848&zoom=true&previewImage=false&scale=true&disable_scroll=true&theme=light', 'Patung Tuhan Yesus', '2022-08-10 09:43:11', '2022-08-10 09:43:11'),
@@ -15,20 +60,27 @@ INSERT INTO `destination` (`id_destination`, `gambar_destination`, `nama_destina
 (22, '62f3f6db615d4..jpg', 'Lokomata', 0, 15, 'Tempat ini juga tak jauh berbeda dengan tempat pemakaman lainnya Lokomata dikenal sebagai tempat menyimpan jenazah dan berada di pinggir jalan raya. Lokomata berarti lubang, tempat yang terdiri dari batu yang sangat besar daan dilubangi untuk meletakkan j', '//www.arcgis.com/apps/Embed/index.html?webmap=f33e031275e147498a0a411359ce25f0&extent=119.8467,-2.9183,119.8916,-2.8963&zoom=true&previewImage=false&scale=true&disable_scroll=true&theme=light', 'Lokomata', '2022-08-10 10:20:11', '2022-08-10 10:20:11'),
 (23, '62f3f72b7daeb..jpg', 'Wisata Batu Tumonga', 0, 15, 'Wisata Batutumonga merupakan tempat wisata yang sayang untuk dilewatkan. Sebab, desa ini memiliki pemandangan alam yang masih begitu terjaga. Pengunjung bisaa melihat adanya Kota Rantepao dari ketinggian mencapai 1300 M diatas permukaan laut. Keberadaanny', '//www.arcgis.com/apps/Embed/index.html?webmap=8c5965c975cb4644a1c2444708e055f7&extent=119.8966,-2.9329,119.9415,-2.9108&zoom=true&previewImage=false&scale=true&disable_scroll=true&theme=light', 'Wisata Batu Tumonga', '2022-08-10 10:21:31', '2022-08-10 10:21:31');
 
-INSERT INTO `berita` (`id_berita`, `tgl_berita`, `gambar_berita`, `judul_berita`, `isi_berita`, `created_at`, `updated_at`) VALUES
-(1, '2022-08-11', '62f40097bfe9b..jpg', 'Toraja Highland Festival pada 11-13 Agustus 2022', 'Toraja Highland Festival (THF) 2022 kembali akan digelar di Toraja Utara, pada 11-13 Agustus 2022.\r\n\r\nAjang promosi wisata berbasis budaya dengan tema \'Taste of Toraja\' ini akan memperkenalkan olahraga dan keindahan alam Toraja. \r\nNantinya Pameran UMKM, P', '2022-08-10 11:01:43', '2022-08-10 11:01:43'),
-(2, '2022-08-15', '62f401cc5e474..jpg', 'Magical Toraja 2022', 'Event Magical Toraja dilaksanakan oleh Perhimpunan Masyarakat Toraja Indonesia (PMTI) bekerja sama dengan Kementerian Pariwisata dan Ekonomi Kreatif (Kemenparekraf) RI. Tema yang diusung ialah \"Pariwisata Maju Indonesia Bangkit, Melalui Festival Berbasis ', '2022-08-10 11:06:52', '2022-08-10 11:06:52'),
-(3, '2022-12-05', '62f403ed7e0d3..jpg', 'Lovely Desember Toraja', 'Salah satu agenda pariwisatanya yaitu Lovely December di Tana Toraja akan digelar kembali atas permintaan masyarakat setempat.  juga akan lebih memperkenalkan branding Wonderful Indonesia serta Pesona Indonesia kepada masyarakat luas dalam program Lovely ', '2022-08-10 11:15:57', '2022-08-10 11:15:57');
+--
+-- Indexes for dumped tables
+--
 
+--
+-- Indeks untuk tabel `destination`
+--
+ALTER TABLE `destination`
+  ADD PRIMARY KEY (`id_destination`);
 
+--
+-- AUTO_INCREMENT untuk tabel yang dibuang
+--
 
-INSERT INTO `profile` (`id_profile`, `id_user`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `nisn`, `alamat`, `no_telp`, `nama_ayah`, `pekerjaan_ayah`, `nama_ibu`, `pekerjaan_ibu`, `tahun_masuk`, `tahun_lulus`, `no_ijazah`, `no_skhun`, `created_at`, `updated_at`) VALUES
-(1, 1, 'L', 'jl;', '2021-11-26', 'jlkjlj', 'ljlj', 'jl', 'jlj', 'ljl', 'jljl', 'jlkjl', 2000, 2000, 'jlkjlkj', 'lkjl', '2021-11-24 11:34:44', '2021-11-24 11:56:23'),
-(2, 3, 'L', 'jl;', '2021-11-26', 'jlkjlj', 'ljlj', 'jl', 'jlj', 'ljl', 'jljl', 'jlkjl', 2000, 2000, 'jlkjlkj', 'lkjl', '2021-11-24 11:34:44', '2021-11-24 11:56:23'),
-(3, 2, 'L', 'jl;', '2021-11-26', 'jlkjlj', 'ljlj', 'jl', 'jlj', 'ljl', 'jljl', 'jlkjl', 2000, 2000, 'jlkjlkj', 'lkjl', '2021-11-24 11:34:44', '2021-11-24 11:56:23');
+--
+-- AUTO_INCREMENT untuk tabel `destination`
+--
+ALTER TABLE `destination`
+  MODIFY `id_destination` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+COMMIT;
 
-
-
-
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `role`, `foto`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@mail.com', NULL, '$2y$10$N6nmGrHUtLAw5/5SlPZqEehn.S5KDNDFHf1yuW184mEw5zLWhVeLm', 'Administrator', '61b5cf20cb753.jpg', NULL, '2021-11-24 09:06:43', '2021-12-11 18:29:52');
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
