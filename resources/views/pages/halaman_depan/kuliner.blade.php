@@ -32,7 +32,7 @@
     <img src="{{ asset('img/home/toraja.jpg') }}">
     <div class="overlay">
         <div class="header-title">
-            <h3>Kuliner</h3>
+            <h3>Rumah Makan</h3>
             <span class="fas fa-record-vinyl"></span>&nbsp;
             <span class="fas fa-record-vinyl"></span>&nbsp;
             <span class="fas fa-record-vinyl"></span>
@@ -42,7 +42,7 @@
 
 <ul class="breadcrumb">
     <li><a href="index.html">Home</a></li>
-    <li>kuliner</li>
+    <li>Rumah Makan</li>
 </ul>
 
 <section class="section section-single">
@@ -50,8 +50,8 @@
         <div class="single-head">
             <div class="col">
                 <img src="{{ asset('img/home/icon/destination.png') }}">
-                <h3>Kuliner ?</h3>
-                <p>Jangan khawatir tentang kuliner, kami menyediakan informasi makanan yang ada di toraja</p>
+                <h3>Rumah Makan </h3>
+                <p>Jangan khawatir tentang rumah makan, kami menyediakan informasi makanan yang ada di toraja</p>
             </div>
             <div class="col-form">
                 <form method="POST">

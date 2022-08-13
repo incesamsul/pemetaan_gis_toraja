@@ -19,6 +19,7 @@ class CreateKulinerTable extends Migration
             $table->string('nama_kuliner');
             $table->integer('rating_kuliner');
             $table->integer('harga');
+            $table->string('alamat');
             $table->string('deskripsi_kuliner');
             $table->timestamps();
         });

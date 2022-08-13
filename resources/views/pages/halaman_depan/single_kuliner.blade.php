@@ -45,35 +45,6 @@
         </div>
     </div>
     <div class="body">
-
-        <div class="panel">
-            <div class="panel-header">
-                <span class="fas fa-clipboard"></span>&nbsp; Detail Harga
-            </div>
-            <div class="panel-body">
-                <div class="detail">
-                    <div class="col-1">
-                        {{-- <div class="col">
-                            <span class="fas fa-clock"></span> 08.00 - 16.000
-                        </div> --}}
-                        {{-- <div class="col">
-                            <span class="fas fa-person-booth"></span> Min 1 | Max 15 Pax
-                        </div> --}}
-                        {{-- <div class="col">
-                            <span class="fas fa-car-alt"></span> Transport
-                        </div> --}}
-                        {{-- <div class="col">
-                            <span class="fas fa-pizza-slice"></span> Breakfast
-                        </div> --}}
-                    </div>
-                    <div class="col-6">
-                        <b>Star From</b>
-                        <h2><b style="color: #f25601">Rp. {{ number_format($kuliner->harga) }} </b><small>/ Pax</small></h2> <br>
-                        {{-- <a href="" data-slide="slides" data-slide-target="#find" class="btn-ticket btn-orange">Find Ticket</a> --}}
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="panel">
             <div class="panel-header">
                 <span class="fas fa-bookmark"></span>&nbsp; Description
