@@ -97,12 +97,12 @@
                         <input type="text" class="form-control" name="harga_tiket" required id="harga_tiket">
                     </div>
                     <div class="form-group">
-                        <label for="link_pemetaan">link pemetaan</label>
+                        <label for="link_pemetaan">link peta</label>
                         <input type="text" class="form-control" name="link_pemetaan" required id="link_pemetaan">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" hidden>
                         <label for="ket_pemetaan">ket pemetaan</label>
-                        <input type="text" class="form-control" name="ket_pemetaan" required id="ket_pemetaan">
+                        <input type="text" class="form-control" name="ket_pemetaan" required id="ket_pemetaan" value="none">
                     </div>
                     <div class="form-group">
                         <label for="deskripsi_penginapan">deskripsi penginapan</label>

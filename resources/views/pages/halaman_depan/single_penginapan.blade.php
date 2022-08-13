@@ -48,34 +48,6 @@
 
         <div class="panel">
             <div class="panel-header">
-                <span class="fas fa-clipboard"></span>&nbsp; Detail Ticket
-            </div>
-            <div class="panel-body">
-                <div class="detail">
-                    <div class="col-1">
-                        <div class="col">
-                            <span class="fas fa-clock"></span> 08.00 - 16.000
-                        </div>
-                        <div class="col">
-                            <span class="fas fa-person-booth"></span> Min 1 | Max 15 Pax
-                        </div>
-                        <div class="col">
-                            <span class="fas fa-car-alt"></span> Transport
-                        </div>
-                        <div class="col">
-                            <span class="fas fa-pizza-slice"></span> Breakfast
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <b>Star From</b>
-                        <h2><b style="color: #f25601">Rp. {{ number_format($penginapan->harga_tiket) }} </b><small>/ Pax</small></h2> <br>
-                        {{-- <a href="" data-slide="slides" data-slide-target="#find" class="btn-ticket btn-orange">Find Ticket</a> --}}
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="panel">
-            <div class="panel-header">
                 <span class="fas fa-bookmark"></span>&nbsp; Description
             </div>
             <div class="panel-body">
@@ -83,25 +55,7 @@
             </div>
         </div>
 
-        <div class="panel">
-            <div class="panel-header">
-                <span class="fas fa-map"></span>&nbsp; Peta
-            </div>
-            <div class="panel-body">
-                <div class="col-1">
 
-                    <iframe width="600" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                        title="toraja1" src="{{ $penginapan->link_pemetaan }}"></iframe>
-                </div>
-                <div class="col-2">
-                    <h3>Detail & peta Info</h3>
-                    <p>Loram1</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero minus laborum cum nisi
-                        perferendis, itaque laudantium dolores nesciunt dolore, alias enim eum qui fugiat ullam.
-                        Accusamus, culpa nulla? Harum, non!.</p>
-                </div>
-            </div>
-        </div>
 
     </div>
 </section>

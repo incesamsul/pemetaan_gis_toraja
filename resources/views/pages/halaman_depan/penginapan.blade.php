@@ -87,7 +87,7 @@
 
 <ul class="pagination">
     <a href="#" class="pagin-arrow arrow-left">
-        <span class="fas fa-arrow-left"></span>
+    <span class="fas fa-arrow-left"></span>
     </a>
     <a class="pagin-number active">1</a>
     <a href="#" class="pagin-number">2</a>
