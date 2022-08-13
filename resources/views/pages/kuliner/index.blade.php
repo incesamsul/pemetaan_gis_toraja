@@ -24,8 +24,8 @@
                             <tr>
                                 <th width="5%" class="sorting" data-sorting_type="asc" data-column_name="id"
                                     style="cursor: pointer">ID <span id="id_icon"></span></th>
-                                <td>Nama Kuliner</td>
-                                <td>Harga</td>
+                                <td>Nama rumah makan</td>
+                                <td>alamat</td>
                                 <td>Deskripsi</td>
                                 <td>Detail</td>
                                 <td></td>
@@ -36,7 +36,8 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $row->nama_kuliner }}</td>
-                                <td>RP. {{ number_format($row->harga ) }}</td>
+                                {{-- <td>RP. {{ number_format($row->harga ) }}</td> --}}
+                                <td>{{ $row->alamat }}</td>
                                 <td>{{ $row->deskripsi_kuliner }}</td>
                                 <td>
                                     <button class="btn bg-main text-white">Detail</button>
@@ -88,13 +89,13 @@
                     enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label for="nama_kuliner">nama kuliner</label>
+                        <label for="nama_kuliner">nama rumah makan</label>
                         <input type="hidden" class="form-control" name="id" id="id">
                         <input type="text" class="form-control" name="nama_kuliner" required id="nama_kuliner">
                     </div>
                     <div class="form-group">
-                        <label for="harga">harga</label>
-                        <input type="text" class="form-control" name="harga" required id="harga">
+                        <label for="alamat">alamat</label>
+                        <input type="text" class="form-control" name="alamat" required id="alamat">
                     </div>
                     <div class="form-group">
                         <label for="deskripsi_kuliner">deskripsi kuliner</label>
