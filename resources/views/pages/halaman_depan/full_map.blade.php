@@ -35,7 +35,7 @@
 		<div class="row">
 			<div class="content">
                 <iframe width="600" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                title="toraja1" src="//www.arcgis.com/apps/Embed/index.html?webmap=9e1e958f3c2e45df8e5aa553d07de981&extent=119.3749,-3.2412,120.0931,-2.8401&zoom=true&previewImage=false&scale=true&disable_scroll=true&theme=light"></iframe>
+                title="toraja1" src="//www.arcgis.com/apps/Embed/index.html?webmap=7877d10494304a8b9570d734cc9f71f5&extent=119.4765,-3.219,120.1947,-2.8659&zoom=true&previewImage=false&scale=true&disable_scroll=true&theme=light"></iframe>
 			</div>
 			<div class="aside">
 				<div class="row">
