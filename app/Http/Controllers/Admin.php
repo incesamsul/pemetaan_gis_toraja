@@ -118,6 +118,33 @@ class Admin extends Controller
         return redirect()->back()->with('message', 'berita Berhasil di tambahkan');
     }
 
+    public function ubahKuliner(Request $request)
+    {
+
+        $image = $request->file('gambar_kuliner');
+
+        if ($image) {
+            $imageName = uniqid() . '.' . '.jpg';
+            $image->move(public_path('data/gambar_kuliner/'), $imageName);
+            Kuliner::where('id_kuliner', $request->id)->update([
+                'nama_kuliner' => $request->nama_kuliner,
+                // 'harga' => $request->harga,
+                'alamat' => $request->alamat,
+                'deskripsi_kuliner' => $request->deskripsi_kuliner,
+                'gambar_kuliner' => $imageName,
+            ]);
+        } else {
+            Kuliner::where('id_kuliner', $request->id)->update([
+                'nama_kuliner' => $request->nama_kuliner,
+                // 'harga' => $request->harga,
+                'alamat' => $request->alamat,
+                'deskripsi_kuliner' => $request->deskripsi_kuliner,
+            ]);
+        }
+
+        return redirect()->back()->with('message', 'berita Berhasil di tambahkan');
+    }
+
     public function hapusKuliner(Request $request)
     {
         Kuliner::where([
@@ -144,6 +171,32 @@ class Admin extends Controller
         return redirect()->back()->with('message', 'berita Berhasil di tambahkan');
     }
 
+    public function ubahBerita(Request $request)
+    {
+
+        $image = $request->file('gambar_berita');
+
+        if ($image) {
+            $imageName = uniqid() . '.' . '.jpg';
+            $image->move(public_path('data/gambar_berita/'), $imageName);
+            Berita::where('id_berita', $request->id)->update([
+                'judul_berita' => $request->judul_berita,
+                'tgl_berita' => $request->tgl_berita,
+                'isi_berita' => $request->isi_berita,
+                'gambar_berita' => $imageName,
+            ]);
+        } else {
+            Berita::where('id_berita', $request->id)->update([
+                'judul_berita' => $request->judul_berita,
+                'tgl_berita' => $request->tgl_berita,
+                'isi_berita' => $request->isi_berita,
+            ]);
+        }
+
+
+        return redirect()->back()->with('message', 'berita Berhasil di tambahkan');
+    }
+
     // CRUD DESTINATION
     public function tambahPenginapan(Request $request)
     {
@@ -160,6 +213,36 @@ class Admin extends Controller
             'deskripsi_penginapan' => $request->deskripsi_penginapan,
             'gambar_penginapan' => $imageName,
         ]);
+        return redirect()->back()->with('message', 'penginapan Berhasil di tambahkan');
+    }
+
+    public function ubahPenginapan(Request $request)
+    {
+
+        $image = $request->file('gambar_penginapan');
+
+        if ($image) {
+            $imageName = uniqid() . '.' . '.jpg';
+            $image->move(public_path('data/gambar_penginapan/'), $imageName);
+            Penginapan::where('id_penginapan', $request->id)->update([
+                'nama_penginapan' => $request->nama_penginapan,
+                'harga_tiket' => $request->harga_tiket,
+                'link_pemetaan' => $request->link_pemetaan,
+                'ket_pemetaan' => $request->ket_pemetaan,
+                'deskripsi_penginapan' => $request->deskripsi_penginapan,
+                'gambar_penginapan' => $imageName,
+            ]);
+        } else {
+            Penginapan::where('id_penginapan', $request->id)->update([
+                'nama_penginapan' => $request->nama_penginapan,
+                'harga_tiket' => $request->harga_tiket,
+                'link_pemetaan' => $request->link_pemetaan,
+                'ket_pemetaan' => $request->ket_pemetaan,
+                'deskripsi_penginapan' => $request->deskripsi_penginapan,
+            ]);
+        }
+
+
         return redirect()->back()->with('message', 'penginapan Berhasil di tambahkan');
     }
 
@@ -188,6 +271,34 @@ class Admin extends Controller
             'deskripsi_destination' => $request->deskripsi_destination,
             'gambar_destination' => $imageName,
         ]);
+        return redirect()->back()->with('message', 'Destinasi Berhasil di tambahkan');
+    }
+
+    public function ubahDestination(Request $request)
+    {
+
+
+        $image = $request->file('gambar_destination');
+        if ($image) {
+            $imageName = uniqid() . '.' . '.jpg';
+            $image->move(public_path('data/gambar_destination/'), $imageName);
+            Destination::where('id_destination', $request->id)->update([
+                'nama_destination' => $request->nama_destination,
+                'harga_tiket' => $request->harga_tiket,
+                'link_pemetaan' => $request->link_pemetaan,
+                'ket_pemetaan' => $request->ket_pemetaan,
+                'deskripsi_destination' => $request->deskripsi_destination,
+                'gambar_destination' => $imageName,
+            ]);
+        } else {
+            Destination::where('id_destination', $request->id)->update([
+                'nama_destination' => $request->nama_destination,
+                'harga_tiket' => $request->harga_tiket,
+                'link_pemetaan' => $request->link_pemetaan,
+                'ket_pemetaan' => $request->ket_pemetaan,
+                'deskripsi_destination' => $request->deskripsi_destination,
+            ]);
+        }
         return redirect()->back()->with('message', 'Destinasi Berhasil di tambahkan');
     }
 

@@ -14,7 +14,7 @@
                             <option value="" selected>Filter</option>
                             <option value=""></option>
                         </select>
-                        <button type="button" class="btn bg-main text-white float-right" data-toggle="modal" id="addUserBtn"
+                        <button type="button" class="btn bg-main text-white float-right" data-toggle="modal" id="btn-tambah"
                             data-target="#modalkuliner"><i class="fas fa-plus"></i></button>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                                 <td>Nama rumah makan</td>
                                 <td>alamat</td>
                                 <td>Deskripsi</td>
-                                <td>Detail</td>
+                                {{-- <td>Detail</td> --}}
                                 <td></td>
                             </tr>
                         </thead>
@@ -39,9 +39,9 @@
                                 {{-- <td>RP. {{ number_format($row->harga ) }}</td> --}}
                                 <td>{{ $row->alamat }}</td>
                                 <td>{{ $row->deskripsi_kuliner }}</td>
-                                <td>
+                                {{-- <td>
                                     <button class="btn bg-main text-white">Detail</button>
-                                </td>
+                                </td> --}}
                                 <td class="option">
                                     <div class="btn-group dropleft btn-option">
                                         <i type="button" class="dropdown-toggle" data-toggle="dropdown"
@@ -49,7 +49,7 @@
                                             <i class="fas fa-ellipsis-v"></i>
                                         </i>
                                         <div class="dropdown-menu">
-                                            <a data-kuliner='@json($row)' class="dropdown-item edit" href="#"><i
+                                            <a data-toggle="modal" data-target="#modalkuliner" data-edit='@json($row)' class="dropdown-item edit" href="#"><i
                                                     class="fas fa-pen"> Edit</i></a>
                                             <a data-id_kuliner="{{ $row->id_kuliner }}"
                                                 class="dropdown-item hapus" href="#"><i class="fas fa-trash">
@@ -85,7 +85,7 @@
 
             <div class="modal-body" id="main-body">
 
-                <form id="formPengguna" action="{{ URL::to('/admin/tambah_kuliner') }}" method="POST"
+                <form id="formKuliner" action="{{ URL::to('/admin/tambah_kuliner') }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
@@ -104,7 +104,7 @@
                     </div>
                     <div class="form-group">
                         <label for="gambar_kuliner">gambar_kuliner</label>
-                        <input required type="file" class="form-control" name="gambar_kuliner">
+                        <input required type="file" class="form-control" name="gambar_kuliner" id="gambar_kuliner">
                     </div>
             </div>
             <div class="modal-footer">
@@ -120,6 +120,24 @@
 <script>
     $(document).ready(function() {
 
+
+
+
+        $('#btn-tambah').on('click',function(){
+            $('#formKuliner').attr('action','/admin/tambah_kuliner');
+            $('#gambar_kuliner').prop('required',true);
+        })
+
+        $('.table-user tbody').on('click', 'tr td a.edit', function(){
+            let dataEdit = $(this).data('edit');
+            console.log(dataEdit);
+            $('#id').val(dataEdit.id_kuliner);
+            $('#nama_kuliner').val(dataEdit.nama_kuliner);
+            $('#alamat').val(dataEdit.alamat);
+            $('#deskripsi_kuliner').val(dataEdit.deskripsi_kuliner);
+            $('#gambar_kuliner').prop('required',false);
+            $('#formKuliner').attr('action','/admin/ubah_kuliner');
+        });
 
 
 

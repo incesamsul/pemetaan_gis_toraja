@@ -14,7 +14,7 @@
                             <option value="" selected>Filter</option>
                             <option value=""></option>
                         </select>
-                        <button type="button" class="btn bg-main text-white float-right" data-toggle="modal" id="addUserBtn"
+                        <button type="button" class="btn bg-main text-white float-right" data-toggle="modal" id="btn-tambah"
                             data-target="#modalDestinasi"><i class="fas fa-plus"></i></button>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                                 <td>Nama destinasi</td>
                                 <td>Harga tiket</td>
                                 <td>Deskripsi</td>
-                                <td>Detail</td>
+                                {{-- <td>Detail</td> --}}
                                 <td></td>
                             </tr>
                         </thead>
@@ -38,9 +38,9 @@
                                 <td>{{ $row->nama_destination }}</td>
                                 <td>RP. {{ number_format($row->harga_tiket ) }}</td>
                                 <td>{{ $row->deskripsi_destination }}</td>
-                                <td>
+                                {{-- <td>
                                     <button class="btn bg-main text-white">Detail</button>
-                                </td>
+                                </td> --}}
                                 <td class="option">
                                     <div class="btn-group dropleft btn-option">
                                         <i type="button" class="dropdown-toggle" data-toggle="dropdown"
@@ -48,7 +48,7 @@
                                             <i class="fas fa-ellipsis-v"></i>
                                         </i>
                                         <div class="dropdown-menu">
-                                            <a data-destinasi='@json($row)' class="dropdown-item edit" href="#"><i
+                                            <a data-edit='@json($row)' data-toggle="modal" data-target="#modalDestinasi" data-destinasi='@json($row)' class="dropdown-item edit" href="#"><i
                                                     class="fas fa-pen"> Edit</i></a>
                                             <a data-id_destination="{{ $row->id_destination }}"
                                                 class="dropdown-item hapus" href="#"><i class="fas fa-trash">
@@ -84,7 +84,7 @@
 
             <div class="modal-body" id="main-body">
 
-                <form id="formPengguna" action="{{ URL::to('/admin/tambah_destination') }}" method="POST"
+                <form id="formDestination" action="{{ URL::to('/admin/tambah_destination') }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
@@ -97,7 +97,7 @@
                         <input type="text" class="form-control" name="harga_tiket" required id="harga_tiket">
                     </div>
                     <div class="form-group">
-                        <label for="link_pemetaan">link pemetaan</label>
+                        <label for="deskripsi_destination">link pemetaan</label>
                         <input type="text" class="form-control" name="link_pemetaan" required id="link_pemetaan">
                     </div>
                     <div class="form-group">
@@ -111,7 +111,7 @@
                     </div>
                     <div class="form-group">
                         <label for="gambar_destination">gambar_destination</label>
-                        <input required type="file" class="form-control" name="gambar_destination">
+                        <input required type="file" class="form-control" name="gambar_destination" id="gambar_destination">
                     </div>
             </div>
             <div class="modal-footer">
@@ -128,7 +128,24 @@
     $(document).ready(function() {
 
 
+        $('#btn-tambah').on('click',function(){
+            $('#formDestination').attr('action','/admin/tambah_destination');
+            $('#gambar_destination').prop('required',true);
+        })
 
+        $('.table-user tbody').on('click', 'tr td a.edit', function(){
+            let dataEdit = $(this).data('edit');
+            console.log(dataEdit);
+            $('#id').val(dataEdit.id_destination);
+            $('#nama_destination').val(dataEdit.nama_destination);
+            $('#harga_tiket').val(dataEdit.harga_tiket);
+            $('#link_pemetaan').val(dataEdit.link_pemetaan);
+            $('#ket_pemetaan').val(dataEdit.ket_pemetaan);
+            $('#deskripsi_destination').val(dataEdit.deskripsi_destination);
+            console.log($('#gambar_destination'))
+            $('#gambar_destination').prop('required',false);
+            $('#formDestination').attr('action','/admin/ubah_destination');
+        });
 
         // TOMBOL HAPUS USER
         $('.table-user tbody').on('click', 'tr td a.hapus', function() {

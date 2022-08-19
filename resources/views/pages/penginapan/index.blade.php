@@ -14,7 +14,7 @@
                             <option value="" selected>Filter</option>
                             <option value=""></option>
                         </select>
-                        <button type="button" class="btn bg-main text-white float-right" data-toggle="modal" id="addUserBtn"
+                        <button type="button" class="btn bg-main text-white float-right" data-toggle="modal" id="btn-tambah"
                             data-target="#modalpenginapan"><i class="fas fa-plus"></i></button>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                                 <td>Nama penginapan</td>
                                 <td>Harga tiket</td>
                                 <td>Deskripsi</td>
-                                <td>Detail</td>
+                                {{-- <td>Detail</td> --}}
                                 <td></td>
                             </tr>
                         </thead>
@@ -38,9 +38,9 @@
                                 <td>{{ $row->nama_penginapan }}</td>
                                 <td>RP. {{ number_format($row->harga_tiket ) }}</td>
                                 <td>{{ $row->deskripsi_penginapan }}</td>
-                                <td>
+                                {{-- <td>
                                     <button class="btn bg-main text-white">Detail</button>
-                                </td>
+                                </td> --}}
                                 <td class="option">
                                     <div class="btn-group dropleft btn-option">
                                         <i type="button" class="dropdown-toggle" data-toggle="dropdown"
@@ -48,7 +48,7 @@
                                             <i class="fas fa-ellipsis-v"></i>
                                         </i>
                                         <div class="dropdown-menu">
-                                            <a data-penginapan='@json($row)' class="dropdown-item edit" href="#"><i
+                                            <a data-toggle="modal" data-target="#modalpenginapan" data-edit='@json($row)' class="dropdown-item edit" href="#"><i
                                                     class="fas fa-pen"> Edit</i></a>
                                             <a data-id_penginapan="{{ $row->id_penginapan }}"
                                                 class="dropdown-item hapus" href="#"><i class="fas fa-trash">
@@ -84,7 +84,7 @@
 
             <div class="modal-body" id="main-body">
 
-                <form id="formPengguna" action="{{ URL::to('/admin/tambah_penginapan') }}" method="POST"
+                <form id="formPenginapan" action="{{ URL::to('/admin/tambah_penginapan') }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
@@ -111,7 +111,7 @@
                     </div>
                     <div class="form-group">
                         <label for="gambar_penginapan">gambar_penginapan</label>
-                        <input required type="file" class="form-control" name="gambar_penginapan">
+                        <input required type="file" class="form-control" name="gambar_penginapan" id="gambar_penginapan">
                     </div>
             </div>
             <div class="modal-footer">
@@ -128,6 +128,23 @@
     $(document).ready(function() {
 
 
+
+        $('#btn-tambah').on('click',function(){
+            $('#formPenginapan').attr('action','/admin/tambah_penginapan');
+            $('#gambar_penginapan').prop('required',true);
+        })
+
+        $('.table-user tbody').on('click', 'tr td a.edit', function(){
+            let dataEdit = $(this).data('edit');
+            console.log(dataEdit);
+            $('#id').val(dataEdit.id_penginapan);
+            $('#nama_penginapan').val(dataEdit.nama_penginapan);
+            $('#harga_tiket').val(dataEdit.harga_tiket);
+            $('#link_pemetaan').val(dataEdit.link_pemetaan);
+            $('#deskripsi_penginapan').val(dataEdit.deskripsi_penginapan);
+            $('#gambar_penginapan').prop('required',false);
+            $('#formPenginapan').attr('action','/admin/ubah_penginapan');
+        });
 
 
         // TOMBOL HAPUS USER
