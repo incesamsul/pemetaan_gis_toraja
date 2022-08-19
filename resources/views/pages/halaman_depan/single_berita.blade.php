@@ -64,52 +64,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="aside">
-				<div class="row">
-					<div class="aside-content">
-						<form method="POST">
-							<div class="content-input">
-								<input type="text" name="cari" class="form-control" placeholder="Search ...">
-							</div>
-							<div class="content-btn">
-								<button type="submit" class="btn-search"><i class="ion-search"></i></button>
-							</div>
-						</form>
-					</div>
-					<div class="aside-content">
-						<div class="content-title">
-							<b>KATEGORI</b>
-						</div>
-						<div class="content-body">
-							<ul style="padding: 0;list-style: none;">
-								<li><a href="news.html">News</a></li>
-								<li><a href="news.html">Culture</a></li>
-								<li><a href="news.html">Event</a></li>
-								<li><a href="news.html">Adventure</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="aside-content">
-						<div class="content-title">
-							<b>REKOMENDASI</b>
-						</div>
-						<div class="content-body">
-							<ul style="padding: 0;list-style: none;">
-								<li><a href="single-news.html">
-									Keistimewaan toraja di Kaca Internasional
-								</a></li>
-								<li><a href="single-news.html">
-									Ini Dia! 5 Rekomendasi Wisata Asik di toraja
-								</a></li>
-								<li><a href="single-news.html">
-									Krumunan Gajah yang Tertawa di Kebun Binatang toraja
-								</a></li>
-								<li><a href="single-news.html">
-									Tempat Paling Wajib Dikunjungi Jika Kamu Main ke toraja
-								</a></li>
-							</ul>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>

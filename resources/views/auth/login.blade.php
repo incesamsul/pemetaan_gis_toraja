@@ -28,7 +28,7 @@
         <div class="container-fluid login-wrapper ">
             <div class="row login-row">
                 <div class="col-md-4 login-sec ">
-                    <h2 class="text-center mt-5">Pemtaan Toraja</h2>
+                    <h2 class="text-center mt-5">Pemetaan Wisata Toraja</h2>
                     @if (session('fail'))
                     <p class="text-danger">{{ session('fail') }}</p>
                     @endif
@@ -49,7 +49,7 @@
                         <a href="#" class="forgot"><u> Forgot Your Password?</u></a>
                         <button type="submit" class="btn-block login-button">Login</button>
                     </form>
-                    <div class="copy-text">Copyright © 2021 ♦ Pemtaan Toraja.</div>
+                    <div class="copy-text">Copyright © 2022 ♦ Pemetaan Toraja.</div>
                 </div>
                 <div class="col-md-8 banner-sec">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"

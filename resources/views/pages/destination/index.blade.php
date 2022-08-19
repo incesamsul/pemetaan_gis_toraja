@@ -8,13 +8,7 @@
                 <div class="card-header d-flex  justify-content-between">
                     <h4>Data Destinasi</h4>
                     <div class="table-tools d-flex justify-content-around ">
-                        <input type="text" class="form-control card-form-header mr-3"
-                            placeholder="Cari Data Pengguna ..." id="cari-data-pengguna">
-                        <select class="custom-select form-control mr-3" id="filter-data-pengguna">
-                            <option value="" selected>Filter</option>
-                            <option value=""></option>
-                        </select>
-                        <button type="button" class="btn bg-main text-white float-right" data-toggle="modal" id="btn-tambah"
+                        <button type="button" class="btn bg-main text-white float-right" data-toggle="modal" id="addUserBtn"
                             data-target="#modalDestinasi"><i class="fas fa-plus"></i></button>
                     </div>
                 </div>

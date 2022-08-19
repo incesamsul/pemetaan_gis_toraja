@@ -8,13 +8,7 @@
                 <div class="card-header d-flex  justify-content-between">
                     <h4>Data Penginapan</h4>
                     <div class="table-tools d-flex justify-content-around ">
-                        <input type="text" class="form-control card-form-header mr-3"
-                            placeholder="Cari Data Pengguna ..." id="cari-data-pengguna">
-                        <select class="custom-select form-control mr-3" id="filter-data-pengguna">
-                            <option value="" selected>Filter</option>
-                            <option value=""></option>
-                        </select>
-                        <button type="button" class="btn bg-main text-white float-right" data-toggle="modal" id="btn-tambah"
+                        <button type="button" class="btn bg-main text-white float-right" data-toggle="modal" id="addUserBtn"
                             data-target="#modalpenginapan"><i class="fas fa-plus"></i></button>
                     </div>
                 </div>
@@ -25,7 +19,7 @@
                                 <th width="5%" class="sorting" data-sorting_type="asc" data-column_name="id"
                                     style="cursor: pointer">ID <span id="id_icon"></span></th>
                                 <td>Nama penginapan</td>
-                                <td>Harga tiket</td>
+                                <td>Harga Penginapan/malam</td>
                                 <td>Deskripsi</td>
                                 {{-- <td>Detail</td> --}}
                                 <td></td>
@@ -93,7 +87,7 @@
                         <input type="text" class="form-control" name="nama_penginapan" required id="nama_penginapan">
                     </div>
                     <div class="form-group">
-                        <label for="harga_tiket">harga tiket</label>
+                        <label for="harga_tiket">harga penginapan/malam</label>
                         <input type="text" class="form-control" name="harga_tiket" required id="harga_tiket">
                     </div>
                     <div class="form-group">

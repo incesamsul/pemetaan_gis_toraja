@@ -68,11 +68,6 @@
                     <div class="caption">
                         <div class="caption-text">
                             <p>{{ $row->nama_destination }}</p>
-                            <span class="fas fa-star checked"></span>
-                            <span class="fas fa-star checked"></span>
-                            <span class="fas fa-star checked"></span>
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span> <br>
                             <span class="fas fa-shopping-bag"></span> &nbsp;
                             <b>Rp. {{ number_format($row->harga_tiket) }}</b> <br>
                             <a href="{{ URL::to('/single_destination/'.$row->id_destination) }}"
