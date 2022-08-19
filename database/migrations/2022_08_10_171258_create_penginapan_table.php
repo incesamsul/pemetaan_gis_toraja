@@ -19,7 +19,7 @@ class CreatePenginapanTable extends Migration
             $table->string('nama_penginapan');
             $table->integer('rating_penginapan');
             $table->integer('harga_tiket');
-            $table->string('deskripsi_penginapan');
+            $table->string('deskripsi_penginapan', 5000);
             $table->string('link_pemetaan');
             $table->string('ket_pemetaan');
             $table->timestamps();

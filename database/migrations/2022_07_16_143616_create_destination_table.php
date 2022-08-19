@@ -19,7 +19,7 @@ class CreateDestinationTable extends Migration
             $table->string('nama_destination');
             $table->integer('rating_destination');
             $table->integer('harga_tiket');
-            $table->string('deskripsi_destination');
+            $table->string('deskripsi_destination', 5000);
             $table->string('link_pemetaan');
             $table->string('ket_pemetaan');
             $table->timestamps();
