@@ -75,19 +75,23 @@ Route::group(['middleware' => ['auth', 'ceklevel:Administrator']], function () {
 
         // CRUD PENGINAPAN
         Route::post('/tambah_penginapan', [Admin::class, 'tambahPenginapan']);
+        Route::post('/ubah_penginapan', [Admin::class, 'ubahPenginapan']);
         Route::post('/hapus_penginapan', [Admin::class, 'hapusPenginapan']);
 
         // CRUD BERITA
         Route::post('/tambah_berita', [Admin::class, 'tambahBerita']);
+        Route::post('/ubah_berita', [Admin::class, 'ubahBerita']);
         Route::post('/hapus_berita', [Admin::class, 'hapusBerita']);
 
         // CRUD KULINER
         Route::post('/tambah_kuliner', [Admin::class, 'tambahKuliner']);
+        Route::post('/ubah_kuliner', [Admin::class, 'ubahKuliner']);
         Route::post('/hapus_kuliner', [Admin::class, 'hapusKuliner']);
 
 
         // CRUD DESTINATION
         Route::post('/tambah_destination', [Admin::class, 'tambahDestination']);
+        Route::post('/ubah_destination', [Admin::class, 'ubahDestination']);
         Route::post('/hapus_destination', [Admin::class, 'hapusDestination']);
 
         // CRUD PENGGUNA

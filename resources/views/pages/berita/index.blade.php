@@ -20,7 +20,7 @@
                                     style="cursor: pointer">ID <span id="id_icon"></span></th>
                                     <td>tgl berita</td>
                                 <td>judul berita</td>
-                                <td>Detail</td>
+                                {{-- <td>Detail</td> --}}
                                 <td></td>
                             </tr>
                         </thead>
@@ -30,9 +30,9 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $row->tgl_berita }}</td>
                                 <td>{{ $row->judul_berita }}</td>
-                                <td>
+                                {{-- <td>
                                     <button class="btn bg-main text-white">Detail</button>
-                                </td>
+                                </td> --}}
                                 <td class="option">
                                     <div class="btn-group dropleft btn-option">
                                         <i type="button" class="dropdown-toggle" data-toggle="dropdown"
@@ -40,7 +40,7 @@
                                             <i class="fas fa-ellipsis-v"></i>
                                         </i>
                                         <div class="dropdown-menu">
-                                            <a data-berita='@json($row)' class="dropdown-item edit" href="#"><i
+                                            <a data-toggle="modal" data-target="#modalberita" data-edit='@json($row)' class="dropdown-item edit" href="#"><i
                                                     class="fas fa-pen"> Edit</i></a>
                                             <a data-id_berita="{{ $row->id_berita }}"
                                                 class="dropdown-item hapus" href="#"><i class="fas fa-trash">
@@ -76,7 +76,7 @@
 
             <div class="modal-body" id="main-body">
 
-                <form id="formPengguna" action="{{ URL::to('/admin/tambah_berita') }}" method="POST"
+                <form id="formBerita" action="{{ URL::to('/admin/tambah_berita') }}" method="POST"
                     enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
@@ -111,6 +111,23 @@
 <script>
     $(document).ready(function() {
 
+
+
+        $('#btn-tambah').on('click',function(){
+            $('#formBerita').attr('action','/admin/tambah_berita');
+            $('#gambar_berita').prop('required',true);
+        })
+
+        $('.table-user tbody').on('click', 'tr td a.edit', function(){
+            let dataEdit = $(this).data('edit');
+            console.log(dataEdit);
+            $('#id').val(dataEdit.id_berita);
+            $('#judul_berita').val(dataEdit.judul_berita);
+            $('#tgl_berita').val(dataEdit.tgl_berita);
+            $('#isi_berita').val(dataEdit.isi_berita);
+            $('#gambar_berita').prop('required',false);
+            $('#formBerita').attr('action','/admin/ubah_berita');
+        });
 
 
 
