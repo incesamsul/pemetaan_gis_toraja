@@ -33,6 +33,14 @@ INSERT INTO `berita` (`id_berita`, `tgl_berita`, `gambar_berita`, `judul_berita`
 (11, '2022-08-15', '62f401cc5e474..jpg', 'Magical Toraja 2022', 'Event Magical Toraja dilaksanakan oleh Perhimpunan Masyarakat Toraja Indonesia (PMTI) bekerja sama dengan Kementerian Pariwisata dan Ekonomi Kreatif (Kemenparekraf) RI. Tema yang diusung ialah \"Pariwisata Maju Indonesia Bangkit, Melalui Festival Berbasis ', '2022-08-10 11:06:52', '2022-08-10 11:06:52'),
 (12, '2022-12-05', '62f403ed7e0d3..jpg', 'Lovely Desember Toraja', 'Salah satu agenda pariwisatanya yaitu Lovely December di Tana Toraja akan digelar kembali atas permintaan masyarakat setempat.  juga akan lebih memperkenalkan branding Wonderful Indonesia serta Pesona Indonesia kepada masyarakat luas dalam program Lovely ', '2022-08-10 11:15:57', '2022-08-10 11:15:57');
 
+INSERT INTO `kuliner` (`id_kuliner`, `gambar_kuliner`, `nama_kuliner`, `rating_kuliner`, `harga`, `deskripsi_kuliner`, `created_at`, `updated_at`) VALUES
+(1, '62f7fd0488c9d..jpg', 'Café Arion', 0, 0, 'Buka Seriap Hari Jam 10.00 - 21.00 \r\nHadirkan suasana baru dengan konsep yang berbeda dan pertama kalinya di Toraja, ada Cafe, Tempat Service dan Cuci Kendaraan, SPBU Serta Minimarket Hadir Dalam Satu Kompleks. Konsep pelayanan satu kompleks untuk memperm', '2022-08-13 11:35:32', '2022-08-13 11:35:32'),
+(2, '62f7fed095d51..jpg', 'Yamoke Café', 0, 0, 'Buka Setiap Hari 17.00 - 21.00\r\nMelayani Makan di tempat\r\nPesan Antar\r\nBawa Pulang\r\nSilahkan hubungi No tlfon : 081343737941', '2022-08-13 11:43:13', '2022-08-13 11:43:13'),
+(3, '62f7ffe99cf75..jpg', 'Warung Makan Hj. Idaman', 0, 0, 'Buka Setiap Hari 09.00 - 22.00\r\nMelayani Makan di tempat\r\nPesan Antar\r\nBawa Pulang\r\nHalal', '2022-08-13 11:47:53', '2022-08-13 11:47:53'),
+(4, '62f801589c3a3..jpg', 'Rumah Makan Depot 99', 0, 0, 'Buka Setiap Hari jam 13.00 - 21.00\r\nSilahkan hubungi No tlfon : 081242369799\r\nMelayani Makan di tempat, Pesan Antar, Bawa Pulang', '2022-08-13 11:54:00', '2022-08-13 11:54:00'),
+(5, '62f8fa8c6ab0a..jpg', 'Warung Khalisa', 0, 0, 'Buka Setiap Hari jam 09.00 - 22.00', '2022-08-14 05:37:16', '2022-08-14 05:37:16'),
+(7, '62f8fe6460ef3..jpg', 'Rumah Makan Mitra Patma', 0, 0, 'Buka Setiap Hari jam 08.00 - 19. 00 . Menyediakan Makanan Halal', '2022-08-14 05:53:40', '2022-08-14 05:53:40');
+
 
 INSERT INTO `profile` (`id_profile`, `id_user`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `nisn`, `alamat`, `no_telp`, `nama_ayah`, `pekerjaan_ayah`, `nama_ibu`, `pekerjaan_ibu`, `tahun_masuk`, `tahun_lulus`, `no_ijazah`, `no_skhun`, `created_at`, `updated_at`) VALUES
 (1, 1, 'L', 'jl;', '2021-11-26', 'jlkjlj', 'ljlj', 'jl', 'jlj', 'ljl', 'jljl', 'jlkjl', 2000, 2000, 'jlkjlkj', 'lkjl', '2021-11-24 11:34:44', '2021-11-24 11:56:23'),
