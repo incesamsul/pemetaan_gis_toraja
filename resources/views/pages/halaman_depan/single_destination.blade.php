@@ -95,10 +95,7 @@
                 </div>
                 <div class="col-2">
                     <h3>Detail & peta Info</h3>
-                    <p>Loram1</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero minus laborum cum nisi
-                        perferendis, itaque laudantium dolores nesciunt dolore, alias enim eum qui fugiat ullam.
-                        Accusamus, culpa nulla? Harum, non!.</p>
+                    <p>{{ $destination->ket_pemetaan }}</p>
                 </div>
             </div>
         </div>
