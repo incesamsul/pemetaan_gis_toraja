@@ -12,6 +12,7 @@
                 <li><a href="/berita">Berita</a></li>
                 {{-- <li><a data-slide="slides" data-slide-target="{{ URL::to('/kuliner') }}">Rumah makan</a></li> --}}
                 <li><a href="{{ URL::to('/kuliner') }}">Rumah makan</a></li>
+                <li><a href="{{ URL::to('/penginapan') }}">Penginapan</a></li>
                 <li><a href="/full_map"> Full map</a></li>
                 {{-- <li><button class="btn-login" id="openLogin">LOGIN</button></li> --}}
                 <li><button data-path="{{ URL::to('/login') }}" class="btn-login">LOGIN</button></li>
