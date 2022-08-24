@@ -79,7 +79,8 @@
                 <span class="fas fa-bookmark"></span>&nbsp; Description
             </div>
             <div class="panel-body">
-                <p>{{ $destination->deskripsi_destination }}</p>
+                <p>{{ $destination->deskripsi_destination }} </p>
+                <p> klik <a href="https://www.google.co.id/maps/place/{{ $destination->nama_destination }}">disini</a> untuk melihat rute</p>
             </div>
         </div>
 
