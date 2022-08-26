@@ -23,7 +23,8 @@ class Home extends Controller
 
     public function fullMap()
     {
-        return view('pages.halaman_depan.full_map');
+        $data['berita'] = Berita::all();
+        return view('pages.halaman_depan.full_map', $data);
     }
 
     public function destination()

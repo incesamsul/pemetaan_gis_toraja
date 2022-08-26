@@ -55,10 +55,12 @@
 						</div>
 						<div class="content-body">
 							<ul style="padding: 0;list-style: none;">
-								<li><a href="news.html">News</a></li>
-								<li><a href="news.html">Culture</a></li>
-								<li><a href="news.html">Event</a></li>
-								<li><a href="news.html">Adventure</a></li>
+								<li><a href="{{ URL::to('/destination') }}">Destination</a></li>
+                                <li><a href="/berita">Berita</a></li>
+                                {{-- <li><a data-slide="slides" data-slide-target="{{ URL::to('/kuliner') }}">Rumah makan</a></li> --}}
+                                <li><a href="{{ URL::to('/kuliner') }}">Rumah makan</a></li>
+                                <li><a href="{{ URL::to('/penginapan') }}">Penginapan</a></li>
+                                <li><a href="/full_map"> Full map</a></li>
 							</ul>
 						</div>
 					</div>
@@ -68,18 +70,11 @@
 						</div>
 						<div class="content-body">
 							<ul style="padding: 0;list-style: none;">
-								<li><a href="single-news.html">
-									Keistimewaan toraja di Kaca Internasional
+                                @foreach ($berita as $row)
+                                <li><a href="{{ URL::to('/berita/' . $row->id_berita) }}">
+									{{ $row->judul_berita }}
 								</a></li>
-								<li><a href="single-news.html">
-									Ini Dia! 5 Rekomendasi Wisata Asik di toraja
-								</a></li>
-								<li><a href="single-news.html">
-									Krumunan Gajah yang Tertawa di Kebun Binatang toraja
-								</a></li>
-								<li><a href="single-news.html">
-									Tempat Paling Wajib Dikunjungi Jika Kamu Main ke toraja
-								</a></li>
+                                @endforeach
 							</ul>
 						</div>
 					</div>
