@@ -112,6 +112,7 @@ class Admin extends Controller
             'nama_kuliner' => $request->nama_kuliner,
             // 'harga' => $request->harga,
             'alamat' => $request->alamat,
+            'link_website' => $request->link_website,
             'deskripsi_kuliner' => $request->deskripsi_kuliner,
             'gambar_kuliner' => $imageName,
         ]);
@@ -129,6 +130,7 @@ class Admin extends Controller
             Kuliner::where('id_kuliner', $request->id)->update([
                 'nama_kuliner' => $request->nama_kuliner,
                 // 'harga' => $request->harga,
+                'link_website' => $request->link_website,
                 'alamat' => $request->alamat,
                 'deskripsi_kuliner' => $request->deskripsi_kuliner,
                 'gambar_kuliner' => $imageName,

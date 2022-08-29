@@ -52,6 +52,7 @@
             <div class="panel-body">
                 <p>{{ $kuliner->deskripsi_kuliner }}</p>
                 <p> klik <a href="https://www.google.co.id/maps/place/{{ $kuliner->nama_kuliner }}">disini</a> untuk melihat rute</p>
+                <p> klik <a href="{{ $kuliner->link_website }}">disini</a> untuk membuka website</p>
             </div>
         </div>
 

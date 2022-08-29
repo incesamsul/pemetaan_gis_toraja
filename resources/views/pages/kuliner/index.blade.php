@@ -21,6 +21,7 @@
                                 <td>Nama rumah makan</td>
                                 <td>alamat</td>
                                 <td>Deskripsi</td>
+                                <td>link Website</td>
                                 {{-- <td>Detail</td> --}}
                                 <td></td>
                             </tr>
@@ -33,6 +34,7 @@
                                 {{-- <td>RP. {{ number_format($row->harga ) }}</td> --}}
                                 <td>{{ $row->alamat }}</td>
                                 <td>{{ $row->deskripsi_kuliner }}</td>
+                                <td>{{ $row->link_website }}</td>
                                 {{-- <td>
                                     <button class="btn bg-main text-white">Detail</button>
                                 </td> --}}
@@ -90,6 +92,10 @@
                     <div class="form-group">
                         <label for="alamat">alamat</label>
                         <input type="text" class="form-control" name="alamat" required id="alamat">
+                    </div>
+                    <div class="form-group">
+                        <label for="link_website">link website</label>
+                        <input type="text" class="form-control" name="link_website" required id="link_website">
                     </div>
                     <div class="form-group">
                         <label for="deskripsi_kuliner">deskripsi kuliner</label>
