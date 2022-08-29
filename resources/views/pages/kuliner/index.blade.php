@@ -134,6 +134,7 @@
             $('#id').val(dataEdit.id_kuliner);
             $('#nama_kuliner').val(dataEdit.nama_kuliner);
             $('#alamat').val(dataEdit.alamat);
+            $('#link_website').val(dataEdit.link_website);
             $('#deskripsi_kuliner').val(dataEdit.deskripsi_kuliner);
             $('#gambar_kuliner').prop('required',false);
             $('#formKuliner').attr('action','/admin/ubah_kuliner');

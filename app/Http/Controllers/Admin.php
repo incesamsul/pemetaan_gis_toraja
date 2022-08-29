@@ -140,6 +140,7 @@ class Admin extends Controller
                 'nama_kuliner' => $request->nama_kuliner,
                 // 'harga' => $request->harga,
                 'alamat' => $request->alamat,
+                'link_website' => $request->link_website,
                 'deskripsi_kuliner' => $request->deskripsi_kuliner,
             ]);
         }
