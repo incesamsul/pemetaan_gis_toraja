@@ -52,6 +52,7 @@
             </div>
             <div class="panel-body">
                 <p>{{ $penginapan->deskripsi_penginapan }}</p>
+                <p> klik <a href="https://www.google.co.id/maps/place/{{ $penginapan->nama_penginapan }}">disini</a> untuk melihat rute</p>
             </div>
         </div>
 
