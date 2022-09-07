@@ -4,6 +4,8 @@
         <div class="texture-handler-top"></div>
         <div class="row">
             <div class="col-left">
+                <img src="{{ asset('img/logo-unitama.png') }}" alt="logo unitama" width="100">
+                <p>Made with <i class="fas fa-heart red"></i> by Nensi</p>
                 <p>Copyright &copy; 2022</p>
                 <p>Jl. bung, makassar <br> Phone : +62 851 2343 9090 <br> Email : nensi@mail.com </p>
                 <a href="https://www.facebook.com/besttoraja/" target="_blank"><span class="ion-social-facebook icon-social"></span></a>

@@ -37,6 +37,7 @@ Route::get('/penginapan', [Home::class, 'penginapan']);
 Route::get('/single_penginapan/{id_penginapan}', [Home::class, 'singlePenginapan']);
 Route::get('/kuliner', [Home::class, 'kuliner']);
 Route::get('/single_kuliner/{id_kuliner}', [Home::class, 'singleKuliner']);
+Route::post('/komentari/{id_destinasi}', [Home::class, 'komentari']);
 
 
 Route::get('/tentang_aplikasi', [Home::class, 'tentangAplikasi']);

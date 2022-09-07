@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Berita;
 use App\Models\Destination;
+use App\Models\Komentar;
 use App\Models\Kuliner;
 use App\Models\Penginapan;
+use Illuminate\Http\Request;
 
 class Home extends Controller
 {
@@ -47,13 +49,14 @@ class Home extends Controller
 
     public function berita()
     {
-        $data['berita'] = Berita::all();
+        $data['berita'] = Berita::orderBy('created_at', 'ASC')->get();;
         return view('pages.halaman_depan.berita', $data);
     }
 
     public function singleDestination($idDestination)
     {
         $data['destination'] = Destination::where('id_destination', $idDestination)->first();
+        $data['komentar'] = Komentar::where('id_destination', $idDestination)->get();
         return view('pages.halaman_depan.single_destination', $data);
     }
 
@@ -74,5 +77,15 @@ class Home extends Controller
         $data['berita'] = Berita::where('id_berita', $idBerita)->first();
         $data['artikel_terkait'] = Berita::limit(5)->get();
         return view('pages.halaman_depan.single_berita', $data);
+    }
+
+    public function komentari(Request $request, $idDestination)
+    {
+        Komentar::create([
+            'id_destination' => $idDestination,
+            'nama' => $request->nama,
+            'komentar' => $request->komentar,
+        ]);
+        return redirect()->back()->with('message', 'komentar tersimpan');
     }
 }

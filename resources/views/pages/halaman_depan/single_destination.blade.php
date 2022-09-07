@@ -101,6 +101,45 @@
             </div>
         </div>
 
+        <div class="panel">
+            <div class="panel-header">
+                <span class="fas fa-comment-dots"></span>&nbsp; Komentari destinatsi
+            </div>
+            <div class="panel-body">
+                    <div class="col-3">
+                        <form action="{{ URL::to('/komentari/' . $destination->id_destination) }}" method="POST">
+                            @csrf
+                        <div class="form-group">
+                            <input  required style="width: 100% !important;" type="text" name="nama" class="form-control" placeholder="nama ....">
+                            <input  type="hidden" name="id_destinasi" value="{{ $destination->id_destination }}" class="form-control" placeholder="nama ....">
+                            <p></p>
+                            <textarea required name="komentar" class="form-control" placeholder="komentar ...."></textarea>
+                            <button type="submit" class="" style="padding:15px; background:#3498DB; border:none;color:white;cursor:pointer;">simpan</button>
+                        </div>
+                        </form>
+                    </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-header">
+                <span class="fas fa-comment"></span>&nbsp; Komentar pengunjung
+            </div>
+            <div class="panel-body">
+                    <div class="col-1">
+                        @if (count($komentar)> 0)
+                        @foreach ($komentar as $row)
+                            <b>nama : {{ $row->nama }}</b>
+                            <p>{{ $row->komentar }}</p>
+                            <p>berkomentar pada  : {{ $row->created_at }}</p>
+                            <hr>
+                        @endforeach
+                        @else
+                            belum ada komentar
+                        @endif
+                    </div>
+            </div>
+        </div>
     </div>
 </section>
 
