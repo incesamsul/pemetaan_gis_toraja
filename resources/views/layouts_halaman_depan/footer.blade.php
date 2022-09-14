@@ -1,43 +1,16 @@
     <!-- Section Footer -->
 
-    <section class="section-footer">
+    <section class="section-footer" >
         <div class="texture-handler-top"></div>
-        <div class="row">
-            <div class="col-left">
+        <div class="row text-center" style="display: flex; justify-content: center;">
+            <div class="col-right text-center">
                 <img src="{{ asset('img/logo-unitama.png') }}" alt="logo unitama" width="100">
                 <p>Made with <i class="fas fa-heart red"></i> by Nensi</p>
                 <p>Copyright &copy; 2022</p>
                 <p>Jl. bung, makassar <br> Phone : +62 851 2343 9090 <br> Email : nensi@mail.com </p>
-                <a href="https://www.facebook.com/besttoraja/" target="_blank"><span class="ion-social-facebook icon-social"></span></a>
-                <a href="https://www.instagram.com/exploretoraja/" target="_blank"><span class="ion-social-instagram icon-social"></span></a>
-                <a href="https://twitter.com/hashtag/exploretoraja?lang=en" target="_blank"><span class="ion-social-twitter icon-social"></span></a>
-            </div>
-            <div class="col-right">
-                <b>EXPERIENCE</b>
-                <ul>
-                    <li><a href="#">Natural</a></li>
-                    <li><a href="#">Culture</a></li>
-                    <li><a href="#">Religi</a></li>
-                    <li><a href="#">Culnary</a></li>
-                    <li><a href="#">Adventure</a></li>
-                </ul>
-            </div>
-            <div class="col-right">
-                <b>TRAVEL GUIDE</b>
-                <ul>
-                    <li><a href="#">Tourism Guide</a></li>
-                    <li><a href="#">Travel Agent</a></li>
-                    <li><a href="#">Accomodations</a></li>
-                    <li><a href="#">On Budget</a></li>
-                </ul>
-            </div>
-            <div class="col-right">
-                <b>WHAT'S HAPPEN</b>
-                <ul>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Event</a></li>
-                    <li><a href="#">Tips & Info</a></li>
-                </ul>
+                {{-- <a href="https://www.facebook.com/besttoraja/" target="_blank"><span class="icon-social fab fa-facebook"></span></a>
+                <a href="https://www.instagram.com/exploretoraja/" target="_blank"><span class="icon-social fab fa-instagram"></span></a>
+                <a href="https://twitter.com/hashtag/exploretoraja?lang=en" target="_blank"><span class="icon-social fab fa-twitter "></span></a> --}}
             </div>
         </div>
         <div class="footer-bottom">

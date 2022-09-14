@@ -30,6 +30,8 @@
                     <li id="liManajemenPengguna"><a class="nav-link" href="/admin/pengguna">Manajemen Pengguna</a></li>
                 </ul>
             </li>
+            <li class="" id="liMaps"><a target="_blank" class="nav-link" href="https://www.arcgis.com/home/webmap/viewer.html?useExisting=1"><i
+                class="fas fa-map"></i> <span>Arcgis Map</span></a></li>
             <li class="" id="liDestination"><a class="nav-link" href="{{ URL::to('/admin/destination') }}"><i
                         class="fas fa-mountain"></i> <span>Destination</span></a></li>
             <li class="" id="liBerita"><a class="nav-link" href="{{ URL::to('/admin/berita') }}"><i
