@@ -49,7 +49,7 @@ class Home extends Controller
 
     public function berita()
     {
-        $data['berita'] = Berita::orderBy('created_at', 'ASC')->get();;
+        $data['berita'] = Berita::orderBy('created_at', 'DESC')->get();;
         return view('pages.halaman_depan.berita', $data);
     }
 
