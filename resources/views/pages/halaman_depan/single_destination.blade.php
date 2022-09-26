@@ -103,6 +103,19 @@
 
         <div class="panel">
             <div class="panel-header">
+                <span class="fas fa-map"></span>&nbsp; Rute ke wisata lain
+            </div>
+            <div class="panel-body">
+                <div class="col-1">
+                    @foreach ($wisata_lain as $wisata)
+                        <p> <a target="_blank" href="https://www.google.co.id/maps/dir/{{ $destination->nama_destination }}/{{ $wisata->nama_destination }}" class="badge badge-primary">Lihat rute</a> Ke {{ $wisata->nama_destination }} </p>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panel-header">
                 <span class="fas fa-comment-dots"></span>&nbsp; Komentari destinatsi
             </div>
             <div class="panel-body">

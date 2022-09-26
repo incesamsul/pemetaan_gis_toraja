@@ -57,6 +57,7 @@ class Home extends Controller
     {
         $data['destination'] = Destination::where('id_destination', $idDestination)->first();
         $data['komentar'] = Komentar::where('id_destination', $idDestination)->get();
+        $data['wisata_lain'] = Destination::where('id_destination', '!=', $idDestination)->get();
         return view('pages.halaman_depan.single_destination', $data);
     }
 
